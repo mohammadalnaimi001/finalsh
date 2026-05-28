@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/",
   plugins: [react()],
+  cacheDir: "node_modules/.vite",
 
   server: {
     port: 5173,
@@ -19,14 +20,7 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false,
-    cssCodeSplit: true,
-    target: [
-      "es2020",
-      "edge88",
-      "firefox78",
-      "chrome87",
-      "safari14"
-    ],
+    target: "es2020",
     chunkSizeWarningLimit: 700
   },
 

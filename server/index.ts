@@ -20,13 +20,13 @@ const app = express();
 const port = Number(process.env.PORT ?? 8787);
 const jwtSecret = process.env.JWT_SECRET ?? "development-only-secret";
 const customerJwtSecret = process.env.CUSTOMER_JWT_SECRET ?? jwtSecret;
-const adminSeedEmail = process.env.ADMIN_EMAIL ?? "admin@shakraperfume.com";
-const adminSeedPassword = process.env.ADMIN_PASSWORD ?? "ShakraAdmin@2026";
+const adminSeedEmail = process.env.ADMIN_EMAIL ?? "admin@shakra.com";
+const adminSeedPassword = process.env.ADMIN_PASSWORD ?? "Admin12345";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const uploadsDir = path.resolve(__dirname, "..", "public", "uploads");
 
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -34,7 +34,9 @@ app.use(
       const allowlist = [process.env.VITE_APP_DOMAIN, "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176", "http://localhost:5177", "http://localhost:5178"]
         .filter(Boolean) as string[];
       const localhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
-      if (localhost || allowlist.includes(origin)) return callback(null, true);
+      const railway = /^https?:\/\/.*\.railway\.app$/i.test(origin);
+      const up = /^https?:\/\/.*\.up\.railway\.app$/i.test(origin);
+      if (localhost || railway || up || allowlist.includes(origin)) return callback(null, true);
       return callback(new Error("CORS origin not allowed"));
     }
   })
