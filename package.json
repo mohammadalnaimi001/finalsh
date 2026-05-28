@@ -2,7 +2,9 @@
   "name": "shakra-perfume-commerce",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=20.0.0" },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
@@ -14,9 +16,7 @@
     "db:migrate": "node -e \"console.log('Run: psql \\\"$DATABASE_URL\\\" -f server/schema.sql')\"",
     "lint": "eslint .",
     "typecheck": "tsc -b"
-    
   },
-  
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",
     "bcryptjs": "^3.0.2",
@@ -34,7 +34,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
     "tsx": "^4.19.4",
-    "vite": "^8.0.14",
+    "vite": "^5.4.19",
     "zod": "^3.25.23"
   },
   "devDependencies": {
