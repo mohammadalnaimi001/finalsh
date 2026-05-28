@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#3b2b16"/>
+      <stop offset=".45" stop-color="#11100e"/>
+      <stop offset="1" stop-color="#050403"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="260" fill="#d6b56d" text-anchor="middle" font-family="Georgia, serif" font-size="98" letter-spacing="18">SP</text>
+  <text x="600" y="350" fill="#fff7df" text-anchor="middle" font-family="Georgia, serif" font-size="58">Shakra Perfume</text>
+  <text x="600" y="412" fill="#c6bfae" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" letter-spacing="6">LUXURY NICHE FRAGRANCE HOUSE</text>
+</svg>

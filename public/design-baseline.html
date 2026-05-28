@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakra Perfume | Luxury Niche Fragrance House</title>
+<meta name="description" content="Shakra Perfume — A luxury niche fragrance house. Discover exclusive, handcrafted scents that transcend time. Shop our collections of rare and opulent perfumes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Didact+Gothic&family=Cinzel:wght@400;500;600&family=Cairo:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5A3;
+  --gold-pale: #F5EDD8;
+  --obsidian: #0A0A0A;
+  --charcoal: #111111;
+  --dark: #1A1A1A;
+  --mid: #2A2A2A;
+  --smoke: #3D3D3D;
+  --silver: #8A8A8A;
+  --pearl: #E8E4DC;
+  --white: #FAFAF8;
+  --radius: 2px;
+  --trans: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--obsidian);color:var(--pearl);font-family:'Didact Gothic',sans-serif;overflow-x:hidden;cursor:default}
+::selection{background:var(--gold);color:var(--obsidian)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--obsidian)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:#f7f5f0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.8s ease}
+#loader.hidden{opacity:0;pointer-events:none}
+.loader-logo-img{height:130px;width:auto;animation:fadeInUp 1s ease forwards}
+.loader-bar{width:200px;height:1px;background:rgba(201,169,110,0.25);margin-top:2.5rem;overflow:hidden}
+.loader-fill{height:100%;background:var(--gold);animation:loaderAnim 2s ease forwards}
+
+/* LOGO IMAGE SYSTEM */
+.logo-img-dark{filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(348deg) brightness(0.85);display:block}
+.logo-img-nav{height:36px;width:auto}
+.logo-img-full{height:72px;width:auto;margin-bottom:0.8rem}
+.logo-img-auth{height:96px;width:auto}
+@keyframes loaderAnim{0%{width:0}100%{width:100%}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+
+/* PAGES */
+.page{display:none;min-height:100vh;animation:fadeIn 0.5s ease}
+.page.active{display:block}
+
+/* NAVBAR */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 4%;display:flex;align-items:center;justify-content:space-between;transition:var(--trans)}
+nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:1rem 4%;border-bottom:1px solid rgba(201,169,110,0.15)}
+.nav-logo{display:flex;align-items:center;gap:0.7rem;cursor:pointer;text-decoration:none;line-height:1}
+.logo-mark{width:40px;height:40px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);letter-spacing:0.05em}
+.logo-text{font-family:'Cinzel',serif;font-size:1rem;color:var(--white);letter-spacing:0.25em;font-weight:400}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{font-size:0.7rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:var(--trans);position:relative;cursor:pointer}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:var(--trans)}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:1.5rem}
+.nav-icon{background:none;border:none;color:var(--silver);cursor:pointer;transition:var(--trans);font-size:1.1rem;position:relative;padding:0.3rem}
+.nav-icon:hover{color:var(--gold)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:var(--gold);color:var(--obsidian);width:16px;height:16px;border-radius:50%;font-size:0.6rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+.instagram-link{color:var(--silver);transition:var(--trans)}
+.instagram-link:hover{color:var(--gold)}
+.nav-instagram{color:var(--silver);font-size:1.1rem;transition:var(--trans)}
+.nav-instagram:hover{color:var(--gold)}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.3rem}
+.hamburger span{display:block;width:22px;height:1px;background:var(--silver);transition:var(--trans)}
+.hamburger:hover span{background:var(--gold)}
+
+/* MOBILE NAV */
+.mobile-nav{position:fixed;inset:0;background:var(--obsidian);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--pearl);letter-spacing:0.2em;text-decoration:none;transition:var(--trans);cursor:pointer}
+.mobile-nav a:hover{color:var(--gold)}
+.mobile-nav-close{position:absolute;top:1.5rem;right:4%;font-size:1.5rem;color:var(--silver);cursor:pointer;transition:var(--trans)}
+.mobile-nav-close:hover{color:var(--gold)}
+
+/* HERO */
+.hero{position:relative;height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(201,169,110,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(201,169,110,0.05) 0%, transparent 50%), var(--obsidian)}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.hero-orb-1{width:500px;height:500px;background:rgba(201,169,110,0.06);top:-100px;right:-100px;animation:orbFloat 8s ease-in-out infinite alternate}
+.hero-orb-2{width:300px;height:300px;background:rgba(201,169,110,0.04);bottom:100px;left:5%;animation:orbFloat 10s 2s ease-in-out infinite alternate}
+@keyframes orbFloat{0%{transform:translate(0,0)}100%{transform:translate(30px,30px)}}
+.hero-content{position:relative;z-index:2;padding:0 8%;max-width:750px}
+.hero-eyebrow{font-size:0.65rem;color:var(--gold);letter-spacing:0.4em;text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:fadeInUp 1s 0.8s both}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6rem);line-height:1.05;color:var(--white);margin-bottom:1.5rem;opacity:0;animation:fadeInUp 1s 1s both}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-subtitle{font-size:0.9rem;color:var(--silver);line-height:1.8;max-width:400px;margin-bottom:2.5rem;letter-spacing:0.05em;opacity:0;animation:fadeInUp 1s 1.2s both}
+.hero-actions{display:flex;align-items:center;gap:2rem;opacity:0;animation:fadeInUp 1s 1.4s both}
+.btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--gold);color:var(--obsidian);padding:0.9rem 2.2rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;border:none;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:0.75rem;background:transparent;color:var(--pearl);padding:0.9rem 2.2rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;border:1px solid rgba(201,169,110,0.4);cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif;text-decoration:none}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-scroll{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;opacity:0;animation:fadeIn 1s 2s both;cursor:pointer}
+.hero-scroll span{font-size:0.6rem;color:var(--silver);letter-spacing:0.3em;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:1}}
+
+/* MARQUEE */
+.marquee-section{border-top:1px solid rgba(201,169,110,0.1);border-bottom:1px solid rgba(201,169,110,0.1);padding:1.2rem 0;overflow:hidden;background:rgba(201,169,110,0.02)}
+.marquee-track{display:flex;gap:4rem;animation:marquee 25s linear infinite;white-space:nowrap}
+.marquee-item{font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--silver);letter-spacing:0.3em;text-transform:uppercase;display:flex;align-items:center;gap:4rem}
+.marquee-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTION STYLES */
+section{padding:6rem 8%}
+.section-eyebrow{font-size:0.65rem;color:var(--gold);letter-spacing:0.4em;text-transform:uppercase;margin-bottom:1rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);color:var(--white);line-height:1.15;margin-bottom:1.5rem}
+.section-subtitle{font-size:0.9rem;color:var(--silver);line-height:1.8;max-width:500px}
+.divider{width:60px;height:1px;background:var(--gold);margin:1.5rem 0}
+
+/* COLLECTIONS */
+.collections-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3rem}
+.collection-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;group:true}
+.collection-card:first-child{grid-row:span 2;aspect-ratio:auto}
+.collection-bg{position:absolute;inset:0;transition:transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)}
+.collection-card:hover .collection-bg{transform:scale(1.05)}
+.col-1-bg{background:linear-gradient(160deg,#1a0f00 0%,#2d1f0a 40%,#1a0f00 100%)}
+.col-2-bg{background:linear-gradient(160deg,#0a0a1a 0%,#0f0f2d 40%,#0a0a1a 100%)}
+.col-3-bg{background:linear-gradient(160deg,#0a1a0a 0%,#0f2d1a 40%,#0a1a0a 100%)}
+.col-4-bg{background:linear-gradient(160deg,#1a0a0a 0%,#2d0f0f 40%,#1a0a0a 100%)}
+.col-5-bg{background:linear-gradient(160deg,#0f0a1a 0%,#1f0f2d 40%,#0f0a1a 100%)}
+.bottle-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.6;transition:var(--trans)}
+.bottle-art svg{display:none}
+.bottle-art::before{content:"";position:absolute;inset:0;background:url('/assets/official-bottle.png') center 15%/cover no-repeat;filter:brightness(1.06) contrast(1.08) saturate(1.06)}
+.collection-card:hover .bottle-art{opacity:0.9}
+.collection-info{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.5rem;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,transparent 100%)}
+.collection-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:0.3rem}
+.collection-count{font-size:0.65rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase}
+.collection-hover{position:absolute;bottom:1.5rem;right:1.5rem;width:40px;height:40px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:var(--trans)}
+.collection-card:hover .collection-hover{opacity:1;transform:translateY(0)}
+.collection-hover svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+
+/* PRODUCTS */
+.products-section{background:var(--charcoal)}
+.products-filter{display:flex;align-items:center;gap:1.5rem;margin-bottom:3rem;flex-wrap:wrap}
+.filter-btn{background:none;border:1px solid rgba(201,169,110,0.2);color:var(--silver);padding:0.5rem 1.2rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.filter-btn.active,.filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.product-card{cursor:pointer;transition:var(--trans);position:relative}
+.product-card:hover{transform:translateY(-8px)}
+.product-image{aspect-ratio:3/4;background:var(--dark);position:relative;overflow:hidden;margin-bottom:1.2rem;min-height:240px}
+.product-visual{position:absolute;inset:0;display:flex;align-items:stretch;justify-content:stretch;transition:var(--trans)}
+.product-visual .bottle-render{width:100%;height:100%}
+.product-card:hover .product-visual{transform:scale(1.04)}
+.product-actions{position:absolute;bottom:1rem;left:1rem;right:1rem;display:flex;gap:0.5rem;opacity:0;transform:translateY(10px);transition:var(--trans)}
+.product-card:hover .product-actions{opacity:1;transform:translateY(0)}
+.product-btn{flex:1;padding:0.7rem;background:rgba(10,10,10,0.85);backdrop-filter:blur(10px);border:1px solid rgba(201,169,110,0.4);color:var(--gold);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.product-btn:hover{background:var(--gold);color:var(--obsidian)}
+.product-wishlist{width:40px;background:rgba(10,10,10,0.85);backdrop-filter:blur(10px);border:1px solid rgba(201,169,110,0.4);color:var(--silver);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--trans);flex-shrink:0}
+.product-wishlist:hover{color:var(--gold)}
+.product-badge{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--obsidian);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.3rem 0.7rem;font-weight:700}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.3rem}
+.product-notes{font-size:0.7rem;color:var(--silver);letter-spacing:0.1em;margin-bottom:0.5rem}
+.product-price{font-size:0.85rem;color:var(--gold)}
+.product-price-jod{font-size:0.75rem;color:var(--silver);margin-left:0.5rem}
+
+/* ABOUT / STORY */
+.story-section{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.story-visual{position:relative}
+.story-frame{aspect-ratio:3/4;background:var(--dark);position:relative;overflow:hidden}
+.story-frame-inner{position:absolute;inset:10%;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center}
+.story-accent{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border:1px solid rgba(201,169,110,0.3)}
+.story-stat{position:absolute;bottom:-20px;left:-20px;background:var(--obsidian);border:1px solid rgba(201,169,110,0.2);padding:1.5rem}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold);line-height:1}
+.stat-label{font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase;margin-top:0.3rem}
+.story-content{}
+.story-text{font-size:0.95rem;color:var(--silver);line-height:1.9;margin-bottom:1.5rem}
+.story-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.pillar{border-left:1px solid rgba(201,169,110,0.3);padding-left:1rem}
+.pillar-title{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--white);margin-bottom:0.3rem}
+.pillar-text{font-size:0.75rem;color:var(--silver);line-height:1.6}
+
+/* TESTIMONIALS */
+.testimonials-section{background:var(--charcoal);text-align:center}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.testimonial-card{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:2.5rem 2rem;position:relative;transition:var(--trans)}
+.testimonial-card:hover{border-color:rgba(201,169,110,0.3)}
+.testimonial-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:3rem;color:var(--gold);opacity:0.3;line-height:1;margin-bottom:1rem}
+.testimonial-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--pearl);line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+.testimonial-author{font-size:0.65rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase}
+.testimonial-location{font-size:0.65rem;color:var(--silver);margin-top:0.2rem;letter-spacing:0.1em}
+.stars{color:var(--gold);font-size:0.7rem;margin-bottom:1rem;letter-spacing:0.2em}
+
+/* NEWSLETTER */
+.newsletter-section{background:var(--obsidian);border-top:1px solid rgba(201,169,110,0.1);text-align:center}
+.newsletter-section .section-title{margin-bottom:0.5rem}
+.newsletter-section .section-subtitle{margin:0 auto 2rem;text-align:center}
+.newsletter-form{display:flex;max-width:450px;margin:0 auto;gap:0;border:1px solid rgba(201,169,110,0.3)}
+.newsletter-input{flex:1;background:transparent;border:none;padding:1rem 1.5rem;color:var(--white);font-family:'Didact Gothic',sans-serif;font-size:0.85rem;outline:none}
+.newsletter-input::placeholder{color:var(--silver)}
+.newsletter-submit{background:var(--gold);color:var(--obsidian);border:none;padding:1rem 1.5rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif;white-space:nowrap}
+.newsletter-submit:hover{background:var(--gold-light)}
+
+/* FOOTER */
+footer{background:var(--obsidian);border-top:1px solid rgba(201,169,110,0.15);padding:5rem 8% 3rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+.footer-brand .logo-mark{width:48px;height:48px;font-size:1rem;margin-bottom:1rem}
+.footer-brand .logo-text{display:block;font-family:'Cinzel',serif;font-size:1.1rem;color:var(--white);letter-spacing:0.25em;margin-bottom:1rem}
+.footer-desc{font-size:0.8rem;color:var(--silver);line-height:1.8;margin-bottom:1.5rem;max-width:260px}
+.footer-social{display:flex;gap:1rem}
+.social-icon{width:38px;height:38px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;color:var(--silver);text-decoration:none;transition:var(--trans);font-size:0.85rem}
+.social-icon:hover{border-color:var(--gold);color:var(--gold)}
+.footer-heading{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--white);margin-bottom:1.5rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.8rem}
+.footer-links a{font-size:0.8rem;color:var(--silver);text-decoration:none;letter-spacing:0.05em;transition:var(--trans);cursor:pointer}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:0.7rem;margin-bottom:1rem}
+.footer-contact-item svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:2px}
+.footer-contact-item span{font-size:0.8rem;color:var(--silver);line-height:1.6}
+.footer-bottom{border-top:1px solid rgba(201,169,110,0.1);padding-top:2rem;display:flex;align-items:center;justify-content:space-between}
+.footer-copy{font-size:0.7rem;color:var(--smoke);letter-spacing:0.1em}
+.footer-legal{display:flex;gap:2rem}
+.footer-legal a{font-size:0.7rem;color:var(--smoke);text-decoration:none;transition:var(--trans);cursor:pointer}
+.footer-legal a:hover{color:var(--silver)}
+
+/* SHOP PAGE */
+.shop-hero{padding:10rem 8% 4rem;background:var(--charcoal)}
+.shop-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem}
+.shop-controls{display:flex;align-items:center;gap:1rem}
+.search-box{display:flex;align-items:center;background:var(--dark);border:1px solid rgba(201,169,110,0.2);padding:0.6rem 1rem;gap:0.7rem}
+.search-box input{background:none;border:none;color:var(--white);font-family:'Didact Gothic',sans-serif;font-size:0.8rem;outline:none;width:200px}
+.search-box input::placeholder{color:var(--smoke)}
+.search-box svg{width:16px;height:16px;stroke:var(--silver);fill:none;stroke-width:1.5}
+.sort-select{background:var(--dark);border:1px solid rgba(201,169,110,0.2);color:var(--silver);padding:0.6rem 1rem;font-family:'Didact Gothic',sans-serif;font-size:0.75rem;outline:none;cursor:pointer;letter-spacing:0.05em}
+.shop-layout{display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+.shop-sidebar{background:var(--dark);padding:2rem;border:1px solid rgba(201,169,110,0.1)}
+.sidebar-section{margin-bottom:2rem}
+.sidebar-title{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--white);margin-bottom:1rem;padding-bottom:0.7rem;border-bottom:1px solid rgba(201,169,110,0.1)}
+.sidebar-option{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.7rem;cursor:pointer}
+.sidebar-option input{accent-color:var(--gold);cursor:pointer}
+.sidebar-option label{font-size:0.78rem;color:var(--silver);cursor:pointer;transition:var(--trans)}
+.sidebar-option:hover label{color:var(--gold-light)}
+.price-range{display:flex;gap:0.5rem;align-items:center}
+.price-input{flex:1;background:var(--obsidian);border:1px solid rgba(201,169,110,0.2);color:var(--white);padding:0.4rem 0.7rem;font-size:0.75rem;outline:none;font-family:'Didact Gothic',sans-serif}
+.sidebar-btn{width:100%;background:none;border:1px solid rgba(201,169,110,0.3);color:var(--gold);padding:0.7rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:var(--trans);margin-top:0.5rem;font-family:'Didact Gothic',sans-serif}
+.sidebar-btn:hover{background:var(--gold);color:var(--obsidian)}
+
+/* PRODUCT DETAIL */
+.product-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;padding-top:10rem}
+.product-gallery{position:sticky;top:100px}
+.gallery-main{aspect-ratio:1;background:var(--dark);position:relative;overflow:hidden;margin-bottom:1rem}
+.gallery-thumbs{display:flex;gap:0.5rem}
+.gallery-thumb{width:60px;height:60px;background:var(--dark);border:1px solid transparent;cursor:pointer;position:relative;overflow:hidden;transition:var(--trans)}
+.gallery-thumb.active,.gallery-thumb:hover{border-color:var(--gold)}
+.product-detail-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:var(--white);margin-bottom:0.5rem}
+.product-detail-collection{font-size:0.65rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:1rem}
+.product-rating{display:flex;align-items:center;gap:0.7rem;margin-bottom:1.5rem}
+.rating-stars{color:var(--gold);font-size:0.85rem}
+.rating-count{font-size:0.75rem;color:var(--silver)}
+.product-detail-price{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin-bottom:1.5rem}
+.product-detail-price span{font-size:1.1rem;color:var(--silver);margin-left:0.5rem}
+.size-selector{margin-bottom:1.5rem}
+.size-label{font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.7rem}
+.size-options{display:flex;gap:0.5rem}
+.size-opt{padding:0.5rem 1rem;border:1px solid rgba(201,169,110,0.2);background:none;color:var(--silver);font-size:0.75rem;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.size-opt.active,.size-opt:hover{border-color:var(--gold);color:var(--gold)}
+.qty-selector{display:flex;align-items:center;gap:0;border:1px solid rgba(201,169,110,0.2);width:fit-content;margin-bottom:1.5rem}
+.qty-btn{background:none;border:none;color:var(--silver);width:40px;height:40px;font-size:1.2rem;cursor:pointer;transition:var(--trans)}
+.qty-btn:hover{color:var(--gold)}
+.qty-num{width:50px;text-align:center;font-size:0.9rem;color:var(--white);padding:0.5rem}
+.product-detail-btns{display:flex;gap:1rem;margin-bottom:2rem}
+.product-detail-btns .btn-primary{flex:1;justify-content:center}
+.notes-section{border-top:1px solid rgba(201,169,110,0.1);padding-top:1.5rem;margin-bottom:1.5rem}
+.notes-title{font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.8rem}
+.note-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
+.note-tag{background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);color:var(--gold-light);padding:0.3rem 0.8rem;font-size:0.7rem;letter-spacing:0.1em}
+.accordion-item{border-top:1px solid rgba(201,169,110,0.1)}
+.accordion-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;cursor:pointer;color:var(--pearl);font-size:0.8rem;letter-spacing:0.1em}
+.accordion-header svg{width:14px;height:14px;stroke:var(--silver);fill:none;stroke-width:1.5;transition:var(--trans)}
+.accordion-header.open svg{transform:rotate(180deg)}
+.accordion-body{font-size:0.8rem;color:var(--silver);line-height:1.8;padding-bottom:1rem;display:none}
+.accordion-body.open{display:block}
+
+/* CART */
+.cart-page{padding:10rem 8% 4rem}
+.cart-grid{display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:start}
+.cart-item{display:grid;grid-template-columns:80px 1fr auto;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(201,169,110,0.1);align-items:center}
+.cart-item-image{width:80px;height:80px;background:var(--dark);position:relative;overflow:hidden}
+.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.3rem}
+.cart-item-variant{font-size:0.7rem;color:var(--silver);margin-bottom:0.7rem}
+.cart-item-qty{display:flex;align-items:center;gap:0.5rem}
+.cart-qty-btn{background:none;border:1px solid rgba(201,169,110,0.2);color:var(--silver);width:28px;height:28px;cursor:pointer;transition:var(--trans);font-size:1rem}
+.cart-qty-btn:hover{border-color:var(--gold);color:var(--gold)}
+.cart-item-price{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold)}
+.cart-remove{background:none;border:none;color:var(--smoke);cursor:pointer;transition:var(--trans);font-size:0.8rem;letter-spacing:0.1em}
+.cart-remove:hover{color:var(--gold)}
+.order-summary{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:2rem}
+.summary-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);margin-bottom:1.5rem}
+.summary-row{display:flex;justify-content:space-between;margin-bottom:1rem;font-size:0.85rem;color:var(--silver)}
+.summary-row.total{border-top:1px solid rgba(201,169,110,0.2);padding-top:1rem;margin-top:1rem;color:var(--white);font-size:1rem}
+.summary-row.total .price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.3rem}
+.summary-delivery-note{font-size:0.7rem;color:var(--gold);margin-bottom:1.5rem}
+
+/* CHECKOUT */
+.checkout-page{padding:10rem 8% 4rem}
+.checkout-grid{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start}
+.checkout-section{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:2rem;margin-bottom:1.5rem}
+.checkout-section-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:1.5rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(201,169,110,0.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{margin-bottom:1rem}
+.form-label{font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase;display:block;margin-bottom:0.5rem}
+.form-input{width:100%;background:var(--obsidian);border:1px solid rgba(201,169,110,0.2);color:var(--white);padding:0.75rem 1rem;font-family:'Didact Gothic',sans-serif;font-size:0.85rem;outline:none;transition:var(--trans)}
+.form-input:focus{border-color:var(--gold)}
+.form-input::placeholder{color:var(--smoke)}
+.form-select{width:100%;background:var(--obsidian);border:1px solid rgba(201,169,110,0.2);color:var(--white);padding:0.75rem 1rem;font-family:'Didact Gothic',sans-serif;font-size:0.85rem;outline:none;cursor:pointer}
+.payment-option{border:1px solid rgba(201,169,110,0.2);padding:1.2rem;cursor:pointer;transition:var(--trans);display:flex;align-items:center;gap:1rem;margin-bottom:0.7rem}
+.payment-option.selected{border-color:var(--gold);background:rgba(201,169,110,0.05)}
+.payment-option input[type=radio]{accent-color:var(--gold)}
+.payment-label{font-size:0.85rem;color:var(--pearl)}
+.payment-desc{font-size:0.7rem;color:var(--silver);margin-top:0.2rem}
+.card-fields{display:none;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(201,169,110,0.1)}
+.card-fields.show{display:block}
+.secure-badge{display:flex;align-items:center;gap:0.5rem;font-size:0.7rem;color:var(--silver);margin-top:1rem}
+.secure-badge svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5}
+
+/* AUTH */
+.auth-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem}
+.auth-container{width:100%;max-width:460px}
+.auth-logo{display:flex;flex-direction:column;align-items:center;margin-bottom:3rem}
+.auth-logo .logo-mark{width:56px;height:56px;font-size:1.1rem;margin-bottom:0.7rem}
+.auth-logo .logo-text{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--white);letter-spacing:0.25em}
+.auth-box{background:var(--dark);border:1px solid rgba(201,169,110,0.15);padding:2.5rem}
+.auth-title{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--white);margin-bottom:0.3rem}
+.auth-sub{font-size:0.8rem;color:var(--silver);margin-bottom:2rem}
+.auth-switch{text-align:center;margin-top:1.5rem;font-size:0.8rem;color:var(--silver)}
+.auth-switch a{color:var(--gold);text-decoration:none;cursor:pointer}
+.auth-divider{display:flex;align-items:center;gap:1rem;margin:1.5rem 0}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:rgba(201,169,110,0.15)}
+.auth-divider span{font-size:0.7rem;color:var(--smoke);letter-spacing:0.1em}
+.social-auth{display:flex;gap:0.7rem}
+.social-auth-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.8rem;border:1px solid rgba(201,169,110,0.2);background:none;color:var(--silver);font-size:0.75rem;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.social-auth-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* CONTACT */
+.contact-page{padding:10rem 8% 6rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.contact-info-block{display:flex;align-items:flex-start;gap:1rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(201,169,110,0.1)}
+.contact-icon{width:44px;height:44px;border:1px solid rgba(201,169,110,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.contact-info-title{font-size:0.65rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.4rem}
+.contact-info-value{font-size:0.9rem;color:var(--pearl)}
+.whatsapp-btn{display:inline-flex;align-items:center;gap:0.7rem;background:#25D366;color:white;padding:0.8rem 1.8rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif;margin-top:1.5rem;text-decoration:none}
+.whatsapp-btn:hover{background:#1ebe5d;transform:translateY(-2px)}
+.instagram-cta{display:inline-flex;align-items:center;gap:0.7rem;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;padding:0.8rem 1.8rem;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif;margin-top:0.7rem;text-decoration:none;display:flex}
+.instagram-cta:hover{opacity:0.9;transform:translateY(-2px)}
+
+/* ABOUT PAGE */
+.about-hero{padding:10rem 8% 4rem;text-align:center;background:var(--charcoal)}
+.about-manifesto{max-width:700px;margin:0 auto 4rem;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--pearl);line-height:1.7;text-align:center}
+.about-values{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.value-card{text-align:center;padding:2.5rem 2rem;border:1px solid rgba(201,169,110,0.1);transition:var(--trans)}
+.value-card:hover{border-color:rgba(201,169,110,0.3)}
+.value-icon{width:60px;height:60px;border:1px solid rgba(201,169,110,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.value-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1}
+.value-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:0.7rem}
+.value-text{font-size:0.8rem;color:var(--silver);line-height:1.7}
+
+/* DASHBOARD */
+.dashboard-page{padding:8rem 8% 4rem}
+.dashboard-grid{display:grid;grid-template-columns:240px 1fr;gap:3rem}
+.dashboard-nav{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:1.5rem;height:fit-content;position:sticky;top:100px}
+.dash-nav-item{display:flex;align-items:center;gap:0.8rem;padding:0.8rem 1rem;cursor:pointer;transition:var(--trans);margin-bottom:0.3rem;font-size:0.78rem;color:var(--silver)}
+.dash-nav-item:hover,.dash-nav-item.active{color:var(--gold);background:rgba(201,169,110,0.05)}
+.dash-nav-item svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+.dash-content-title{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--white);margin-bottom:2rem}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem}
+.stat-card{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:1.5rem}
+.stat-card-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);margin-bottom:0.3rem}
+.stat-card-label{font-size:0.7rem;color:var(--silver);letter-spacing:0.15em;text-transform:uppercase}
+.order-table{width:100%;border-collapse:collapse}
+.order-table th{font-size:0.65rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;text-align:left;padding:0.8rem 1rem;border-bottom:1px solid rgba(201,169,110,0.2)}
+.order-table td{padding:1rem;font-size:0.82rem;color:var(--silver);border-bottom:1px solid rgba(201,169,110,0.07)}
+.order-status{display:inline-block;padding:0.2rem 0.7rem;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase}
+.status-delivered{background:rgba(74,222,128,0.1);color:#4ade80}
+.status-processing{background:rgba(251,191,36,0.1);color:#fbbf24}
+.status-shipped{background:rgba(96,165,250,0.1);color:#60a5fa}
+
+/* ADMIN */
+.admin-header{background:var(--dark);border-bottom:1px solid rgba(201,169,110,0.15);padding:1rem 4%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.admin-nav{display:flex;gap:2rem}
+.admin-nav-item{font-size:0.7rem;color:var(--silver);letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:var(--trans);padding-bottom:0.2rem;border-bottom:1px solid transparent}
+.admin-nav-item.active,.admin-nav-item:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.admin-body{display:grid;grid-template-columns:200px 1fr;min-height:calc(100vh - 60px)}
+.admin-sidebar{background:var(--charcoal);border-right:1px solid rgba(201,169,110,0.1);padding:1.5rem 1rem}
+.admin-sidebar-item{display:flex;align-items:center;gap:0.7rem;padding:0.8rem;cursor:pointer;transition:var(--trans);border-radius:2px;margin-bottom:0.3rem;font-size:0.75rem;color:var(--silver)}
+.admin-sidebar-item:hover,.admin-sidebar-item.active{background:rgba(201,169,110,0.08);color:var(--gold)}
+.admin-sidebar-item svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+.admin-main{padding:2rem}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
+.admin-stat{background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:1.2rem}
+.admin-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold)}
+.admin-stat-lbl{font-size:0.65rem;color:var(--silver);letter-spacing:0.15em;text-transform:uppercase;margin-top:0.3rem}
+.admin-stat-trend{font-size:0.7rem;color:#4ade80;margin-top:0.3rem}
+.data-table{width:100%;border-collapse:collapse;background:var(--dark);border:1px solid rgba(201,169,110,0.1)}
+.data-table th{font-size:0.65rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;text-align:left;padding:0.8rem 1rem;border-bottom:1px solid rgba(201,169,110,0.2);background:rgba(201,169,110,0.05)}
+.data-table td{padding:0.8rem 1rem;font-size:0.8rem;color:var(--silver);border-bottom:1px solid rgba(201,169,110,0.07)}
+.data-table tr:hover td{background:rgba(201,169,110,0.03)}
+.action-btn{background:none;border:1px solid rgba(201,169,110,0.2);color:var(--silver);padding:0.3rem 0.7rem;font-size:0.6rem;letter-spacing:0.1em;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.action-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* FAQ */
+.faq-page{padding:10rem 8% 6rem;max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(201,169,110,0.1);padding:1.5rem 0;cursor:pointer}
+.faq-q{display:flex;align-items:center;justify-content:space-between;font-size:0.95rem;color:var(--pearl);font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.faq-q svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;transition:var(--trans);flex-shrink:0}
+.faq-q.open svg{transform:rotate(180deg)}
+.faq-a{font-size:0.85rem;color:var(--silver);line-height:1.8;max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.faq-a.open{max-height:200px;margin-top:1rem}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--dark);border:1px solid rgba(201,169,110,0.3);color:var(--pearl);padding:1rem 1.5rem;font-size:0.8rem;z-index:9998;animation:slideDown 0.3s ease;display:flex;align-items:center;gap:0.8rem;max-width:320px}
+.toast.hidden{display:none}
+.toast-icon{color:var(--gold);flex-shrink:0}
+
+/* WISHLIST HEART */
+.hearted{color:var(--gold) !important}
+.wishlist-filled{fill:var(--gold) !important;stroke:var(--gold) !important}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s ease;padding:1rem}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:var(--dark);border:1px solid rgba(201,169,110,0.2);max-width:600px;width:100%;max-height:90vh;overflow-y:auto;padding:2.5rem;position:relative;transform:translateY(20px);transition:transform 0.3s ease}
+.modal-overlay.open .modal-box{transform:translateY(0)}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--silver);cursor:pointer;font-size:1.3rem;transition:var(--trans)}
+.modal-close:hover{color:var(--gold)}
+
+/* SUCCESS */
+.success-page{padding:10rem 8% 6rem;text-align:center;max-width:600px;margin:0 auto}
+.success-icon{width:80px;height:80px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;animation:fadeIn 0.8s ease}
+.success-icon svg{width:36px;height:36px;stroke:var(--gold);fill:none;stroke-width:1}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--white);margin-bottom:1rem}
+.success-text{font-size:0.9rem;color:var(--silver);line-height:1.8;margin-bottom:2rem}
+.order-id{font-size:0.75rem;color:var(--gold);letter-spacing:0.2em;margin-bottom:2rem}
+
+/* POLICIES */
+.policy-page{padding:10rem 8% 6rem;max-width:800px;margin:0 auto}
+.policy-content h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);margin:2rem 0 0.7rem}
+.policy-content p{font-size:0.85rem;color:var(--silver);line-height:1.9;margin-bottom:1rem}
+.policy-content ul{margin-left:1.5rem;color:var(--silver);font-size:0.85rem;line-height:2}
+
+/* LANGUAGE TOGGLE */
+.lang-toggle{background:none;border:1px solid rgba(201,169,110,0.2);color:var(--silver);padding:0.3rem 0.7rem;font-size:0.65rem;letter-spacing:0.15em;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.lang-toggle:hover{border-color:var(--gold);color:var(--gold)}
+.currency-toggle{background:none;border:none;color:var(--silver);font-size:0.65rem;letter-spacing:0.15em;cursor:pointer;transition:var(--trans);font-family:'Didact Gothic',sans-serif}
+.currency-toggle:hover{color:var(--gold)}
+
+/* BOTTLE RENDER — PHOTOGRAPHIC LUXURY SYSTEM */
+.bottle-svg{transition:transform 0.6s ease}
+.bottle-svg:hover{transform:translateY(-8px)}
+
+/* Base container — always fills parent completely */
+.bottle-render{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+/* Light vignette at base only — keeps label readable without hiding the photo */
+.bottle-render::before{
+  content:"";position:absolute;inset:0;z-index:3;
+  background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.0) 38%);
+  pointer-events:none;
+}
+/* Tone colour bloom */
+.bottle-render::after{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:30%;z-index:4;
+  background:radial-gradient(ellipse at 50% 100%,color-mix(in srgb,var(--tone,#C9A96E) 12%,transparent) 0%,transparent 60%);
+  pointer-events:none;
+}
+
+/* Photo — fills container edge-to-edge, zoomed to crop dark marble edges */
+.bottle-render-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 20%;
+  filter:brightness(1.05) contrast(1.1) saturate(1.14);
+  transform:scale(var(--bottle-scale,1.38));
+  transform-origin:center 22%;
+  transition:transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94),filter 0.65s ease;
+}
+
+.bottle-render-label{
+  position:absolute;z-index:5;bottom:7%;left:50%;transform:translateX(-50%);
+  max-width:86%;padding:0.26rem 0.84rem;font-size:0.5rem;letter-spacing:0.17em;
+  text-transform:uppercase;color:var(--gold);text-align:center;
+  background:rgba(4,4,4,0.80);border:1px solid rgba(201,169,110,0.36);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  backdrop-filter:blur(10px);font-family:'Cinzel',serif;
+}
+
+.product-image{position:relative;overflow:hidden;box-shadow:none}
+.product-visual{position:absolute;inset:0;overflow:hidden;transition:var(--trans)}
+
+.product-card:hover .product-visual .bottle-render .bottle-render-image{
+  filter:brightness(1.1) contrast(1.13) saturate(1.2);
+  transform:scale(calc(var(--bottle-scale,1.38) * 1.04));
+}
+
+/* Gallery main */
+.gallery-main .bottle-render{--bottle-scale:1.22}
+.gallery-main .bottle-render-image{object-position:center 15%}
+
+/* Thumbs + cart */
+.gallery-thumb .bottle-render,.cart-item-image .bottle-render{--bottle-scale:1.28}
+.gallery-thumb .bottle-render-label,.cart-item-image .bottle-render-label{display:none}
+.gallery-thumb .bottle-render::before,.gallery-thumb .bottle-render::after,
+.cart-item-image .bottle-render::before,.cart-item-image .bottle-render::after{display:none}
+
+/* Collection card bottle art */
+.bottle-art::before{filter:brightness(1.06) contrast(1.08) saturate(1.06) !important}
+
+@media(max-width:900px){.product-visual .bottle-render{--bottle-scale:1.34}}
+@media(max-width:600px){.product-visual .bottle-render{--bottle-scale:1.30}}
+
+/* ARABIC / RTL SYSTEM */
+:lang(ar),[dir="rtl"]{
+  font-family:'Cairo','Amiri','Didact Gothic',sans-serif;
+  text-align:right;
+  letter-spacing:0 !important;
+}
+[dir="rtl"] .nav-links{flex-direction:row-reverse}
+[dir="rtl"] .nav-logo{flex-direction:row-reverse}
+[dir="rtl"] .nav-actions{flex-direction:row-reverse}
+[dir="rtl"] .hero-content{padding:0 8% 0 0;text-align:right}
+[dir="rtl"] .hero-actions{flex-direction:row-reverse}
+[dir="rtl"] .hero-title em{display:inline}
+[dir="rtl"] .section-eyebrow,[dir="rtl"] .section-subtitle{text-align:right;letter-spacing:0.05em !important}
+[dir="rtl"] .section-title{text-align:right}
+[dir="rtl"] .divider{margin-right:0}
+[dir="rtl"] .marquee-track{animation:marqueeRTL 25s linear infinite}
+@keyframes marqueeRTL{0%{transform:translateX(-50%)}100%{transform:translateX(0%)}}
+[dir="rtl"] .footer-grid{direction:rtl}
+[dir="rtl"] .footer-desc{text-align:right;direction:rtl}
+[dir="rtl"] .footer-links{text-align:right}
+[dir="rtl"] .footer-bottom{flex-direction:row-reverse}
+[dir="rtl"] .footer-contact-item{flex-direction:row-reverse;text-align:right}
+[dir="rtl"] .footer-social{flex-direction:row-reverse}
+[dir="rtl"] .story-section{direction:rtl}
+[dir="rtl"] .story-pillars{direction:rtl}
+[dir="rtl"] .pillar{border-left:none;border-right:1px solid rgba(201,169,110,0.3);padding-left:0;padding-right:1rem;text-align:right}
+[dir="rtl"] .products-filter{flex-direction:row-reverse;justify-content:flex-end}
+[dir="rtl"] .testimonials-grid{direction:rtl}
+[dir="rtl"] .testimonial-text{text-align:right}
+[dir="rtl"] .newsletter-form{flex-direction:row-reverse}
+[dir="rtl"] .cart-item{direction:rtl}
+[dir="rtl"] .cart-item-qty{flex-direction:row-reverse}
+[dir="rtl"] .order-summary{direction:rtl;text-align:right}
+[dir="rtl"] .summary-row{flex-direction:row-reverse}
+[dir="rtl"] .checkout-grid{direction:rtl}
+[dir="rtl"] .form-row{direction:rtl}
+[dir="rtl"] .form-label{text-align:right;display:block}
+[dir="rtl"] .form-input,[dir="rtl"] .form-select{text-align:right;direction:rtl}
+[dir="rtl"] .size-options{flex-direction:row-reverse}
+[dir="rtl"] .qty-selector{flex-direction:row-reverse}
+[dir="rtl"] .product-detail-btns{flex-direction:row-reverse}
+[dir="rtl"] .notes-section{text-align:right}
+[dir="rtl"] .note-tags{flex-direction:row-reverse;justify-content:flex-end}
+[dir="rtl"] .shop-header{flex-direction:row-reverse}
+[dir="rtl"] .shop-controls{flex-direction:row-reverse}
+[dir="rtl"] .sidebar-option{flex-direction:row-reverse}
+[dir="rtl"] .sidebar-section{text-align:right}
+[dir="rtl"] .contact-grid{direction:rtl}
+[dir="rtl"] .contact-info-block{flex-direction:row-reverse;text-align:right}
+[dir="rtl"] .about-values{direction:rtl}
+[dir="rtl"] .value-card{text-align:center}
+[dir="rtl"] .product-badge{left:auto;right:1rem}
+[dir="rtl"] .product-actions{left:1rem;right:1rem}
+[dir="rtl"] .collection-hover{right:auto;left:1.5rem}
+[dir="rtl"] .accordion-header{flex-direction:row-reverse}
+[dir="rtl"] .mobile-nav{direction:rtl}
+[dir="rtl"] .mobile-nav-close{right:auto;left:4%}
+[dir="rtl"] .toast{right:auto;left:2rem}
+[dir="rtl"] .hero-eyebrow{letter-spacing:0.08em !important}
+[dir="rtl"] .loader-sub{letter-spacing:0.1em !important}
+[dir="rtl"] .btn-primary,[dir="rtl"] .btn-outline{letter-spacing:0.05em}
+[dir="rtl"] .lang-toggle,[dir="rtl"] .currency-toggle{letter-spacing:0.05em}
+[dir="rtl"] .product-name,[dir="rtl"] .product-notes{text-align:right}
+[dir="rtl"] .stat-label,[dir="rtl"] .stat-number{text-align:right}
+[dir="rtl"] .success-page{direction:rtl}
+[dir="rtl"] .auth-box{direction:rtl;text-align:right}
+[dir="rtl"] .auth-sub{text-align:right}
+[dir="rtl"] .auth-switch{text-align:right}
+[dir="rtl"] .auth-divider{direction:rtl}
+[dir="rtl"] .faq-q{flex-direction:row-reverse}
+[dir="rtl"] .faq-page{direction:rtl;text-align:right}
+[dir="rtl"] .hero-scroll{flex-direction:column}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .products-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .story-section{grid-template-columns:1fr;gap:3rem}
+  .collections-grid{grid-template-columns:1fr 1fr}
+  .collections-grid .collection-card:first-child{grid-row:auto}
+  .testimonials-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .about-values{grid-template-columns:1fr 1fr}
+  .checkout-grid,.cart-grid{grid-template-columns:1fr}
+  .shop-layout{grid-template-columns:1fr}
+  .shop-sidebar{display:none}
+  .product-detail-grid{grid-template-columns:1fr;padding-top:8rem}
+  .product-gallery{position:static}
+  .dashboard-grid{grid-template-columns:1fr}
+  .admin-body{grid-template-columns:1fr}
+  .admin-sidebar{display:none}
+  .stats-row{grid-template-columns:1fr}
+  .admin-stats{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .product-visual .bottle-render{--bottle-scale:1.02}
+}
+@media(max-width:600px){
+  section{padding:4rem 6%}
+  nav{padding:1rem 6%}
+  .hero-content{padding:0 6%}
+  .hero-title{font-size:2.5rem}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .footer-grid{grid-template-columns:1fr}
+  .about-values{grid-template-columns:1fr}
+  .collections-grid{grid-template-columns:1fr}
+  .newsletter-form{flex-direction:column}
+  .hero-actions{flex-direction:column;gap:1rem}
+  .admin-stats{grid-template-columns:1fr 1fr}
+  .story-pillars{grid-template-columns:1fr}
+  .product-visual .bottle-render{--bottle-scale:1.0}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img class="loader-logo-img" src="/assets/logo-full.png" alt="Shakra Perfume">
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showPage('home')">
+    <img class="logo-img-dark logo-img-nav" src="/assets/logo-icon.png" alt="Shakra Perfume">
+  </a>
+  <div class="nav-links">
+    <a onclick="showPage('home')" data-i18n="nav.home">Home</a>
+    <a onclick="showPage('shop')" data-i18n="nav.shop">Shop</a>
+    <a onclick="showPage('collections')" data-i18n="nav.collections">Collections</a>
+    <a onclick="showPage('about')" data-i18n="nav.story">Our Story</a>
+    <a onclick="showPage('contact')" data-i18n="nav.contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">عربي</button>
+    <button class="currency-toggle" onclick="toggleCurrency()" id="currBtn">JOD</button>
+    <a href="https://www.instagram.com/shakra_perfume?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="nav-icon instagram-link" title="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </a>
+    <button class="nav-icon" onclick="showPage('wishlist')" title="Wishlist">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    </button>
+    <button class="nav-icon" onclick="showPage('cart')" title="Cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <button class="nav-icon" onclick="showPage('login')" title="Account">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+    </button>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-nav-close" onclick="toggleMobileNav()">✕</span>
+  <a onclick="navTo('home')" data-i18n="nav.home">Home</a>
+  <a onclick="navTo('shop')" data-i18n="nav.shop">Shop</a>
+  <a onclick="navTo('collections')" data-i18n="nav.collections">Collections</a>
+  <a onclick="navTo('about')" data-i18n="nav.story">Our Story</a>
+  <a onclick="navTo('contact')" data-i18n="nav.contact">Contact</a>
+  <a onclick="navTo('login')" data-i18n="nav.account">Account</a>
+</div>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Luxury Niche Fragrance House — Est. 2018</p>
+      <h1 class="hero-title" data-i18n="hero.title">Where Scent<br>Becomes <em>Legend</em></h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Handcrafted from the world's rarest ingredients. Each Shakra fragrance is an olfactory journey — a whisper of luxury that lingers.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('shop')">
+          <span data-i18n="hero.cta">Explore Collection</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <a class="btn-outline" onclick="showPage('about')" data-i18n="hero.story">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('marquee-sec').scrollIntoView({behavior:'smooth'})">
+      <span data-i18n="hero.scroll">Discover</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section" id="marquee-sec">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="marquee-item"><span data-i18n="marquee.1">Luxury Niche Fragrance</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.2">Hand-Blended in Amman</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.3">Rare Oud &amp; Amber</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.4">Free Shipping Over 150 JOD</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.5">Shakra Perfume</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.6">Exclusive Collections</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.1">Luxury Niche Fragrance</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.2">Hand-Blended in Amman</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.3">Rare Oud &amp; Amber</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.4">Free Shipping Over 150 JOD</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.5">Shakra Perfume</span> <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span data-i18n="marquee.6">Exclusive Collections</span> <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS PREVIEW -->
+  <section>
+    <div class="section-eyebrow" data-i18n="collections.eyebrow">Curated Collections</div>
+    <div class="section-title" data-i18n="collections.title">Fragrance for<br>Every Emotion</div>
+    <div class="divider"></div>
+    <div class="collections-grid">
+      <div class="collection-card" onclick="filterCollection('Oud Royale')">
+        <div class="collection-bg col-1-bg"></div>
+        <div class="bottle-art">
+          <svg width="120" height="200" viewBox="0 0 120 200" class="bottle-svg">
+            <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#C9A96E" stop-opacity="0.4"/><stop offset="50%" stop-color="#E8D5A3" stop-opacity="0.7"/><stop offset="100%" stop-color="#C9A96E" stop-opacity="0.4"/></linearGradient></defs>
+            <rect x="40" y="10" width="40" height="12" fill="url(#g1)" rx="3"/>
+            <rect x="48" y="22" width="24" height="8" fill="#C9A96E" opacity="0.6"/>
+            <path d="M30 40 Q30 35 45 32 L75 32 Q90 35 90 40 L90 170 Q90 180 60 180 Q30 180 30 170 Z" fill="url(#g1)" opacity="0.8"/>
+            <rect x="30" y="155" width="60" height="3" fill="#C9A96E" opacity="0.4"/>
+            <text x="60" y="110" text-anchor="middle" font-family="Cinzel,serif" font-size="8" fill="#C9A96E" opacity="0.8" letter-spacing="2">SHAKRA</text>
+            <text x="60" y="125" text-anchor="middle" font-family="Cinzel,serif" font-size="6" fill="#C9A96E" opacity="0.5" letter-spacing="2">OUD ROYALE</text>
+          </svg>
+        </div>
+        <div class="collection-info">
+          <div class="collection-name">Oud Royale</div>
+          <div class="collection-count">7 Fragrances</div>
+        </div>
+        <div class="collection-hover">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('La Nuit')">
+        <div class="collection-bg col-2-bg"></div>
+        <div class="bottle-art">
+          <svg width="80" height="140" viewBox="0 0 80 140" class="bottle-svg">
+            <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#8080CC" stop-opacity="0.4"/><stop offset="50%" stop-color="#B0B0E8" stop-opacity="0.7"/><stop offset="100%" stop-color="#8080CC" stop-opacity="0.4"/></linearGradient></defs>
+            <rect x="28" y="5" width="24" height="8" fill="url(#g2)" rx="2"/>
+            <rect x="32" y="13" width="16" height="5" fill="#9090CC" opacity="0.6"/>
+            <path d="M15 28 Q15 24 28 22 L52 22 Q65 24 65 28 L65 120 Q65 128 40 128 Q15 128 15 120 Z" fill="url(#g2)" opacity="0.8"/>
+            <text x="40" y="78" text-anchor="middle" font-family="Cinzel,serif" font-size="6" fill="#C9A96E" opacity="0.8" letter-spacing="1">LA NUIT</text>
+          </svg>
+        </div>
+        <div class="collection-info">
+          <div class="collection-name">La Nuit</div>
+          <div class="collection-count">5 Fragrances</div>
+        </div>
+        <div class="collection-hover">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Amber Silk')">
+        <div class="collection-bg col-3-bg"></div>
+        <div class="bottle-art">
+          <svg width="80" height="140" viewBox="0 0 80 140" class="bottle-svg">
+            <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7ACC8A" stop-opacity="0.4"/><stop offset="50%" stop-color="#B0E8BC" stop-opacity="0.7"/><stop offset="100%" stop-color="#7ACC8A" stop-opacity="0.4"/></linearGradient></defs>
+            <ellipse cx="40" cy="10" rx="12" ry="5" fill="url(#g3)"/>
+            <rect x="34" y="15" width="12" height="7" fill="#7ACC8A" opacity="0.6"/>
+            <ellipse cx="40" cy="80" rx="28" ry="50" fill="url(#g3)" opacity="0.8"/>
+            <text x="40" y="82" text-anchor="middle" font-family="Cinzel,serif" font-size="5" fill="#C9A96E" opacity="0.8" letter-spacing="1">AMBER SILK</text>
+          </svg>
+        </div>
+        <div class="collection-info">
+          <div class="collection-name">Amber Silk</div>
+          <div class="collection-count">6 Fragrances</div>
+        </div>
+        <div class="collection-hover">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Rose Noir')">
+        <div class="collection-bg col-4-bg"></div>
+        <div class="bottle-art">
+          <svg width="80" height="140" viewBox="0 0 80 140" class="bottle-svg">
+            <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#CC7080" stop-opacity="0.4"/><stop offset="50%" stop-color="#E8B0BC" stop-opacity="0.7"/><stop offset="100%" stop-color="#CC7080" stop-opacity="0.4"/></linearGradient></defs>
+            <rect x="25" y="5" width="30" height="10" fill="url(#g4)" rx="3"/>
+            <path d="M20 25 L20 118 Q20 128 40 128 Q60 128 60 118 L60 25 Z" fill="url(#g4)" opacity="0.8"/>
+            <text x="40" y="75" text-anchor="middle" font-family="Cinzel,serif" font-size="5" fill="#C9A96E" opacity="0.8" letter-spacing="1">ROSE NOIR</text>
+          </svg>
+        </div>
+        <div class="collection-info">
+          <div class="collection-name">Rose Noir</div>
+          <div class="collection-count">4 Fragrances</div>
+        </div>
+        <div class="collection-hover">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Mystic East')">
+        <div class="collection-bg col-5-bg"></div>
+        <div class="bottle-art">
+          <svg width="80" height="140" viewBox="0 0 80 140" class="bottle-svg">
+            <defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#A07ACC" stop-opacity="0.4"/><stop offset="50%" stop-color="#C8B0E8" stop-opacity="0.7"/><stop offset="100%" stop-color="#A07ACC" stop-opacity="0.4"/></linearGradient></defs>
+            <polygon points="40,5 52,22 68,22 56,32 60,48 40,38 20,48 24,32 12,22 28,22" fill="url(#g5)" opacity="0.7"/>
+            <rect x="25" y="50" width="30" height="78" fill="url(#g5)" opacity="0.8"/>
+            <text x="40" y="94" text-anchor="middle" font-family="Cinzel,serif" font-size="5" fill="#C9A96E" opacity="0.8" letter-spacing="1">MYSTIC EAST</text>
+          </svg>
+        </div>
+        <div class="collection-info">
+          <div class="collection-name">Mystic East</div>
+          <div class="collection-count">5 Fragrances</div>
+        </div>
+        <div class="collection-hover">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="products-section">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1rem">
+      <div>
+        <div class="section-eyebrow" data-i18n="featured.eyebrow">Featured</div>
+        <div class="section-title" style="margin-bottom:0" data-i18n="featured.title">Bestsellers</div>
+      </div>
+      <button class="btn-outline" onclick="showPage('shop')" data-i18n="featured.viewall">View All</button>
+    </div>
+    <div class="divider" style="margin-bottom:2.5rem"></div>
+    <div class="products-grid" id="featuredGrid"></div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section>
+    <div class="story-section">
+      <div class="story-visual">
+        <div class="story-frame">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1a0f00 0%,#2d1f0a 100%);display:flex;align-items:center;justify-content:center">
+            <img src="/assets/official-bottle.png" alt="Shakra Perfume bottle" style="width:min(76%,290px);height:min(94%,390px);object-fit:contain;object-position:center 8%;filter:brightness(1.06) contrast(1.1) saturate(1.1)" loading="lazy" decoding="async" />
+          </div>
+          <div class="story-frame-inner"></div>
+        </div>
+        <div class="story-accent"></div>
+        <div class="story-stat">
+          <div class="stat-number" data-i18n="story.stat.number">180+</div>
+          <div class="stat-label" data-i18n="story.stat.label">Rare Ingredients</div>
+        </div>
+      </div>
+      <div class="story-content">
+        <div class="section-eyebrow" data-i18n="story.eyebrow">Our Heritage</div>
+        <h2 class="section-title" data-i18n="story.title">Born from the<br>Essence of the East</h2>
+        <div class="divider"></div>
+        <p class="story-text" data-i18n="story.p1">Shakra Perfume was founded on a singular vision: to create fragrances that transcend time — compositions so rare and personal, they become part of your identity rather than merely adorning it.</p>
+        <p class="story-text" data-i18n="story.p2">Sourced from the souks of Dubai, the rose fields of Taif, and the ancient forests of Cambodia, each ingredient is selected with obsessive attention to quality. Our master perfumers blend Eastern oud traditions with Western haute parfumerie techniques.</p>
+        <div class="story-pillars">
+          <div class="pillar">
+            <div class="pillar-title" data-i18n="story.pillar1.title">Artisan Craft</div>
+            <div class="pillar-text" data-i18n="story.pillar1.text">Every bottle is hand-filled and quality-checked, ensuring perfection in each drop.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title" data-i18n="story.pillar2.title">Rare Materials</div>
+            <div class="pillar-text" data-i18n="story.pillar2.text">We source only the top 1% of raw materials from their country of origin.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title" data-i18n="story.pillar3.title">Timeless Design</div>
+            <div class="pillar-text" data-i18n="story.pillar3.text">Our bottles are heirloom objects — crafted to be displayed and treasured.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title" data-i18n="story.pillar4.title">Authenticity</div>
+            <div class="pillar-text" data-i18n="story.pillar4.text">Every fragrance is original, never a copy — a true Shakra signature.</div>
+          </div>
+        </div>
+        <button class="btn-outline" style="margin-top:2rem" onclick="showPage('about')" data-i18n="story.discover">Discover Our Story</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section-eyebrow" style="text-align:center" data-i18n="testimonials.eyebrow">Reviews</div>
+    <h2 class="section-title" style="text-align:center" data-i18n="testimonials.title">What Our Clients Say</h2>
+    <div class="divider" style="margin:1.5rem auto"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Oud Royale changed my entire perception of what a perfume can be. It is complex, sensual, and impossibly beautiful. I receive compliments everywhere I go.</p>
+        <div class="testimonial-author">Leilani Al-Hassan</div>
+        <div class="testimonial-location">Dubai, UAE</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The packaging alone is a work of art. La Nuit smells like a midnight garden in Marrakech — mysterious, floral, deeply addictive. Worth every dinar.</p>
+        <div class="testimonial-author">Tariq Mansour</div>
+        <div class="testimonial-location">Amman, Jordan</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">I've worn luxury perfumes for 20 years. Shakra's Mystic East is unlike anything I've experienced — a masterclass in Eastern olfactory art. Absolutely extraordinary.</p>
+        <div class="testimonial-author">Sofia Karimian</div>
+        <div class="testimonial-location">Kuwait City</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="section-eyebrow" style="text-align:center" data-i18n="newsletter.eyebrow">Exclusive Access</div>
+    <h2 class="section-title" data-i18n="newsletter.title">Be the First to Know</h2>
+    <p class="section-subtitle" style="text-align:center" data-i18n="newsletter.subtitle">Join our inner circle for early access to new collections, private events, and fragrance stories.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="Your email address" id="newsletterEmail" data-i18n-placeholder="newsletter.placeholder">
+      <button class="newsletter-submit" onclick="subscribeNewsletter()" data-i18n="newsletter.submit">Subscribe</button>
+    </div>
+  </section>
+</div>
+
+<!-- SHOP PAGE -->
+<div id="page-shop" class="page">
+  <div class="shop-hero">
+    <div class="section-eyebrow" data-i18n="shop.eyebrow">The Collection</div>
+    <h1 class="section-title" data-i18n="shop.title">All Fragrances</h1>
+    <div class="divider"></div>
+    <div class="shop-header">
+      <div style="font-size:0.8rem;color:var(--silver)"><span id="productCount">27</span> <span data-i18n="shop.count">fragrances</span></div>
+      <div class="shop-controls">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search fragrances..." id="searchInput" oninput="filterProducts()" data-i18n-placeholder="shop.search">
+        </div>
+        <select class="sort-select" onchange="sortProducts(this.value)">
+          <option value="featured" data-i18n="shop.sort.featured">Featured</option>
+          <option value="price-asc" data-i18n="shop.sort.price-asc">Price: Low to High</option>
+          <option value="price-desc" data-i18n="shop.sort.price-desc">Price: High to Low</option>
+          <option value="name" data-i18n="shop.sort.name">Name A–Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="products-filter" id="filterBtns">
+      <button class="filter-btn active" onclick="setFilter('all',this)" data-i18n="shop.filter.all">All</button>
+      <button class="filter-btn" onclick="setFilter('Oud Royale',this)">Oud Royale</button>
+      <button class="filter-btn" onclick="setFilter('La Nuit',this)">La Nuit</button>
+      <button class="filter-btn" onclick="setFilter('Amber Silk',this)">Amber Silk</button>
+      <button class="filter-btn" onclick="setFilter('Rose Noir',this)">Rose Noir</button>
+      <button class="filter-btn" onclick="setFilter('Mystic East',this)">Mystic East</button>
+    </div>
+  </div>
+  <div style="padding:3rem 8%">
+    <div class="shop-layout">
+      <div class="shop-sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Collections</div>
+          <div class="sidebar-option"><input type="checkbox" id="col1" onchange="filterProducts()"><label for="col1">Oud Royale</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="col2" onchange="filterProducts()"><label for="col2">La Nuit</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="col3" onchange="filterProducts()"><label for="col3">Amber Silk</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="col4" onchange="filterProducts()"><label for="col4">Rose Noir</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="col5" onchange="filterProducts()"><label for="col5">Mystic East</label></div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Concentration</div>
+          <div class="sidebar-option"><input type="checkbox" id="conc1" onchange="filterProducts()"><label for="conc1">Extrait de Parfum</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="conc2" onchange="filterProducts()"><label for="conc2">Eau de Parfum</label></div>
+          <div class="sidebar-option"><input type="checkbox" id="conc3" onchange="filterProducts()"><label for="conc3">Parfum Oil</label></div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Price Range (JOD)</div>
+          <div class="price-range">
+            <input class="price-input" type="number" placeholder="Min" id="priceMin" value="0">
+            <span style="color:var(--silver)">—</span>
+            <input class="price-input" type="number" placeholder="Max" id="priceMax" value="300">
+          </div>
+          <button class="sidebar-btn" onclick="filterProducts()">Apply</button>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Fragrance Family</div>
+          <div class="sidebar-option"><input type="checkbox"><label>Woody & Oud</label></div>
+          <div class="sidebar-option"><input type="checkbox"><label>Floral & Rose</label></div>
+          <div class="sidebar-option"><input type="checkbox"><label>Oriental & Spicy</label></div>
+          <div class="sidebar-option"><input type="checkbox"><label>Citrus & Fresh</label></div>
+          <div class="sidebar-option"><input type="checkbox"><label>Amber & Musk</label></div>
+        </div>
+      </div>
+      <div class="products-grid" id="shopGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL PAGE -->
+<div id="page-product" class="page">
+  <div style="padding:0 8%;background:var(--charcoal);min-height:100vh">
+    <div class="product-detail-grid" id="productDetailContent"></div>
+  </div>
+</div>
+
+<!-- COLLECTIONS PAGE -->
+<div id="page-collections" class="page">
+  <div style="padding:10rem 8% 6rem">
+    <div class="section-eyebrow" data-i18n="collections.page.eyebrow">Shakra Perfume</div>
+    <h1 class="section-title" data-i18n="collections.page.title">Our Collections</h1>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:4rem" data-i18n="collections.page.subtitle">Five distinct olfactory worlds, each a chapter in the Shakra story. Explore fragrances crafted for different moods, seasons, and desires.</p>
+    <div class="collections-grid" style="gap:3px">
+      <div class="collection-card" onclick="filterCollection('Oud Royale')" style="cursor:pointer">
+        <div class="collection-bg col-1-bg"></div>
+        <div class="bottle-art" style="opacity:0.5">
+          <svg width="100" height="160" viewBox="0 0 120 200">
+            <defs><linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#C9A96E" stop-opacity="0.4"/><stop offset="50%" stop-color="#E8D5A3" stop-opacity="0.8"/><stop offset="100%" stop-color="#C9A96E" stop-opacity="0.4"/></linearGradient></defs>
+            <rect x="40" y="10" width="40" height="12" fill="url(#cg1)" rx="3"/><rect x="48" y="22" width="24" height="8" fill="#C9A96E" opacity="0.6"/>
+            <path d="M30 40 Q30 35 45 32 L75 32 Q90 35 90 40 L90 170 Q90 180 60 180 Q30 180 30 170 Z" fill="url(#cg1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="collection-info" style="padding:2.5rem 2rem">
+          <div class="collection-name" style="font-size:1.6rem">Oud Royale</div>
+          <div style="font-size:0.8rem;color:var(--silver);margin:0.7rem 0 0.5rem;line-height:1.6">Our flagship collection. Rich, resinous, and imperial — the finest Cambodian oud blended with saffron, rose, and ambergris.</div>
+          <div class="collection-count">7 Fragrances</div>
+        </div>
+        <div class="collection-hover"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('La Nuit')">
+        <div class="collection-bg col-2-bg"></div>
+        <div class="collection-info" style="padding:2.5rem 2rem">
+          <div class="collection-name" style="font-size:1.6rem">La Nuit</div>
+          <div style="font-size:0.8rem;color:var(--silver);margin:0.7rem 0 0.5rem;line-height:1.6">For the night and its mysteries. Deep florals, dark woods, and seductive musks that bloom after dark.</div>
+          <div class="collection-count">5 Fragrances</div>
+        </div>
+        <div class="collection-hover"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Amber Silk')">
+        <div class="collection-bg col-3-bg"></div>
+        <div class="collection-info" style="padding:2.5rem 2rem">
+          <div class="collection-name" style="font-size:1.6rem">Amber Silk</div>
+          <div style="font-size:0.8rem;color:var(--silver);margin:0.7rem 0 0.5rem;line-height:1.6">Warm, enveloping, and sensual. Liquid amber poured over the finest silk — for those who leave an impression.</div>
+          <div class="collection-count">6 Fragrances</div>
+        </div>
+        <div class="collection-hover"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Rose Noir')">
+        <div class="collection-bg col-4-bg"></div>
+        <div class="collection-info" style="padding:2.5rem 2rem">
+          <div class="collection-name" style="font-size:1.6rem">Rose Noir</div>
+          <div style="font-size:0.8rem;color:var(--silver);margin:0.7rem 0 0.5rem;line-height:1.6">The darkest roses from the Taif valley, accented with black oud and vetiver. Romantic, bold, unforgettable.</div>
+          <div class="collection-count">4 Fragrances</div>
+        </div>
+        <div class="collection-hover"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+      </div>
+      <div class="collection-card" onclick="filterCollection('Mystic East')">
+        <div class="collection-bg col-5-bg"></div>
+        <div class="collection-info" style="padding:2.5rem 2rem">
+          <div class="collection-name" style="font-size:1.6rem">Mystic East</div>
+          <div style="font-size:0.8rem;color:var(--silver);margin:0.7rem 0 0.5rem;line-height:1.6">A journey through the ancient spice routes of the East. Cardamom, incense, and precious woods unite in harmony.</div>
+          <div class="collection-count">5 Fragrances</div>
+        </div>
+        <div class="collection-hover"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART PAGE -->
+<div id="page-cart" class="page">
+  <div class="cart-page">
+    <div class="section-eyebrow" data-i18n="cart.eyebrow">Shopping</div>
+    <h1 class="section-title" data-i18n="cart.title">Your Cart</h1>
+    <div class="divider" style="margin-bottom:2.5rem"></div>
+    <div class="cart-grid">
+      <div>
+        <div id="cartItems"></div>
+        <div id="emptyCart" style="display:none;text-align:center;padding:4rem 0">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--silver);margin-bottom:1rem">Your cart is empty</div>
+          <button class="btn-outline" onclick="showPage('shop')">Continue Shopping</button>
+        </div>
+      </div>
+      <div id="cartSummary"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT PAGE -->
+<div id="page-checkout" class="page">
+  <div class="checkout-page">
+    <div class="section-eyebrow" data-i18n="checkout.eyebrow">Secure Checkout</div>
+    <h1 class="section-title" data-i18n="checkout.title">Complete Your Order</h1>
+    <div class="divider" style="margin-bottom:2.5rem"></div>
+    <div class="checkout-grid">
+      <div>
+        <!-- Contact -->
+        <div class="checkout-section">
+          <div class="checkout-section-title">Contact Information</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input class="form-input" type="text" placeholder="Ahmed" id="chkFirstName">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input class="form-input" type="text" placeholder="Al-Rashid" id="chkLastName">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" placeholder="ahmed@example.com" id="chkEmail">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" type="tel" placeholder="+962 7X XXX XXXX" id="chkPhone">
+          </div>
+        </div>
+        <!-- Shipping -->
+        <div class="checkout-section">
+          <div class="checkout-section-title">Delivery Address</div>
+          <div class="form-group">
+            <label class="form-label">Country</label>
+            <select class="form-select" id="chkCountry">
+              <option>Jordan</option><option>Saudi Arabia</option><option>UAE</option><option>Kuwait</option><option>Qatar</option><option>Bahrain</option><option>Oman</option><option>Egypt</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input class="form-input" type="text" placeholder="Amman" id="chkCity">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">District / Area</label>
+              <input class="form-input" type="text" placeholder="Abdali" id="chkArea">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Postal Code</label>
+              <input class="form-input" type="text" placeholder="11185" id="chkPostal">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Street Address</label>
+            <input class="form-input" type="text" placeholder="Building, Street, Area" id="chkAddress">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Additional Notes (Optional)</label>
+            <input class="form-input" type="text" placeholder="Delivery instructions..." id="chkNotes">
+          </div>
+        </div>
+        <!-- Payment -->
+        <div class="checkout-section">
+          <div class="checkout-section-title">Payment Method</div>
+          <div class="payment-option selected" onclick="selectPayment('card',this)">
+            <input type="radio" name="payment" value="card" checked>
+            <div>
+              <div class="payment-label">Visa / Credit Card</div>
+              <div class="payment-desc">Secure payment powered by SSL encryption</div>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:0.4rem">
+              <div style="background:var(--smoke);color:var(--white);font-size:0.55rem;padding:0.2rem 0.5rem;font-weight:700;border-radius:2px">VISA</div>
+              <div style="background:var(--smoke);color:var(--white);font-size:0.55rem;padding:0.2rem 0.5rem;font-weight:700;border-radius:2px">MC</div>
+            </div>
+          </div>
+          <div class="card-fields show" id="cardFields">
+            <div class="form-group">
+              <label class="form-label">Card Number</label>
+              <input class="form-input" type="text" placeholder="0000 0000 0000 0000" maxlength="19" id="cardNum" oninput="formatCard(this)">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Expiry Date</label>
+                <input class="form-input" type="text" placeholder="MM / YY" maxlength="7" id="cardExpiry" oninput="formatExpiry(this)">
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV</label>
+                <input class="form-input" type="text" placeholder="000" maxlength="3" id="cardCVV">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cardholder Name</label>
+              <input class="form-input" type="text" placeholder="Name on card" id="cardName">
+            </div>
+          </div>
+          <div class="payment-option" onclick="selectPayment('cod',this)" style="margin-top:0.7rem">
+            <input type="radio" name="payment" value="cod">
+            <div>
+              <div class="payment-label">Cash on Delivery (COD)</div>
+              <div class="payment-desc">Pay in cash when your order arrives</div>
+            </div>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="margin-left:auto"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/></svg>
+          </div>
+          <div class="secure-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Your payment information is encrypted and secure
+          </div>
+        </div>
+      </div>
+      <!-- Order Summary -->
+      <div>
+        <div class="order-summary">
+          <div class="summary-title">Order Summary</div>
+          <div id="checkoutItems"></div>
+          <div class="summary-row"><span>Subtotal</span><span id="chkSubtotal">0 JOD</span></div>
+          <div class="summary-row" style="color:var(--gold)"><span>Delivery Fee</span><span>3 JOD</span></div>
+          <div class="summary-delivery-note">Fixed delivery fee across Jordan</div>
+          <div class="summary-row total"><span>Total</span><span class="price" id="chkTotal">3 JOD</span></div>
+          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem" onclick="placeOrder()">
+            Place Order
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </button>
+          <p style="font-size:0.7rem;color:var(--smoke);text-align:center;margin-top:1rem;line-height:1.5">By placing your order, you agree to our Terms of Service and Privacy Policy.</p>
+        </div>
+        <div style="margin-top:1rem;background:var(--dark);border:1px solid rgba(201,169,110,0.1);padding:1.5rem">
+          <div style="font-size:0.65rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.7rem">Need Help?</div>
+          <a href="https://wa.me/962785828950" target="_blank" class="whatsapp-btn" style="display:flex;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS -->
+<div id="page-success" class="page">
+  <div class="success-page">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="section-eyebrow" style="text-align:center">Order Confirmed</div>
+    <h1 class="success-title">Thank You,<br>Your Order is Placed</h1>
+    <div class="order-id" id="successOrderId">Order #SKR-2024-0000</div>
+    <p class="success-text">Your order has been received and is being processed. You will receive a confirmation shortly. Our team will contact you to confirm the delivery details.</p>
+    <p class="success-text" style="color:var(--gold)">Estimated Delivery: 2–4 Business Days</p>
+    <div style="display:flex;gap:1rem;justify-content:center">
+      <button class="btn-primary" onclick="showPage('home')">Continue Shopping</button>
+      <button class="btn-outline" onclick="showPage('dashboard')">Track Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="page-login" class="page">
+  <div style="background:var(--charcoal);min-height:100vh">
+    <div class="auth-page">
+      <div class="auth-container">
+        <div class="auth-logo">
+          <img class="logo-img-dark logo-img-auth" src="/assets/logo-full.png" alt="Shakra Perfume">
+        </div>
+        <div class="auth-box" id="loginBox">
+          <h2 class="auth-title">Welcome Back</h2>
+          <p class="auth-sub">Sign in to your Shakra account</p>
+          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" placeholder="••••••••"></div>
+          <div style="text-align:right;margin-bottom:1.5rem"><a style="font-size:0.75rem;color:var(--gold);cursor:pointer">Forgot password?</a></div>
+          <button class="btn-primary" style="width:100%;justify-content:center" onclick="loginUser()">Sign In</button>
+          <div class="auth-divider"><span>or</span></div>
+          <div class="social-auth">
+            <button class="social-auth-btn">G Google</button>
+            <button class="social-auth-btn">f Facebook</button>
+          </div>
+          <div class="auth-switch">Don't have an account? <a onclick="showRegister()">Create one</a></div>
+        </div>
+        <div class="auth-box" id="registerBox" style="display:none">
+          <h2 class="auth-title">Join Shakra</h2>
+          <p class="auth-sub">Create your luxury fragrance account</p>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="Ahmed"></div>
+            <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Al-Rashid"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" placeholder="+962 7X XXX XXXX"></div>
+          <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" placeholder="Min. 8 characters"></div>
+          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem" onclick="loginUser()">Create Account</button>
+          <div class="auth-switch">Already have an account? <a onclick="showLogin()">Sign in</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST PAGE -->
+<div id="page-wishlist" class="page">
+  <div style="padding:10rem 8% 4rem">
+    <div class="section-eyebrow">Saved</div>
+    <h1 class="section-title">My Wishlist</h1>
+    <div class="divider" style="margin-bottom:2.5rem"></div>
+    <div class="products-grid" id="wishlistGrid"></div>
+    <div id="emptyWishlist" style="text-align:center;padding:4rem 0;display:none">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--silver);margin-bottom:1rem">Your wishlist is empty</div>
+      <button class="btn-outline" onclick="showPage('shop')">Browse Fragrances</button>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD PAGE -->
+<div id="page-dashboard" class="page">
+  <div class="dashboard-page">
+    <div class="dashboard-grid">
+      <div class="dashboard-nav">
+        <div class="dash-nav-item active" onclick="showDashSection('orders',this)">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Orders
+        </div>
+        <div class="dash-nav-item" onclick="showDashSection('wishlist-dash',this)">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Wishlist
+        </div>
+        <div class="dash-nav-item" onclick="showDashSection('profile',this)">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Profile
+        </div>
+        <div class="dash-nav-item" onclick="showDashSection('addresses',this)">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Addresses
+        </div>
+        <div class="dash-nav-item" onclick="showPage('home')">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
+        </div>
+      </div>
+      <div>
+        <div id="dash-orders">
+          <div class="dash-content-title">My Orders</div>
+          <div class="stats-row">
+            <div class="stat-card"><div class="stat-card-num">3</div><div class="stat-card-label">Total Orders</div></div>
+            <div class="stat-card"><div class="stat-card-num" style="color:var(--pearl)">2</div><div class="stat-card-label">Delivered</div></div>
+            <div class="stat-card"><div class="stat-card-num" style="color:#fbbf24">1</div><div class="stat-card-label">Processing</div></div>
+          </div>
+          <table class="order-table">
+            <thead><tr><th>Order ID</th><th>Items</th><th>Date</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>SKR-2024-1023</td><td>Oud Royale No.1</td><td>Nov 12, 2024</td><td>89 JOD</td><td><span class="order-status status-delivered">Delivered</span></td></tr>
+              <tr><td>SKR-2024-0987</td><td>La Nuit Mystère</td><td>Oct 28, 2024</td><td>75 JOD</td><td><span class="order-status status-delivered">Delivered</span></td></tr>
+              <tr><td>SKR-2024-1154</td><td>Amber Velvet + Rose Noir</td><td>Nov 18, 2024</td><td>162 JOD</td><td><span class="order-status status-processing">Processing</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="dash-wishlist-dash" style="display:none">
+          <div class="dash-content-title">My Wishlist</div>
+          <button class="btn-outline" onclick="showPage('wishlist')">View Full Wishlist</button>
+        </div>
+        <div id="dash-profile" style="display:none">
+          <div class="dash-content-title">My Profile</div>
+          <div class="checkout-section" style="max-width:500px">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" value="Ahmed"></div>
+              <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" value="Al-Rashid"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" value="ahmed@example.com"></div>
+            <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" value="+962 79 000 0000"></div>
+            <button class="btn-primary" style="margin-top:0.5rem" onclick="showToast('Profile updated successfully')">Save Changes</button>
+          </div>
+        </div>
+        <div id="dash-addresses" style="display:none">
+          <div class="dash-content-title">Saved Addresses</div>
+          <div class="checkout-section" style="max-width:500px">
+            <div style="font-size:0.85rem;color:var(--silver);margin-bottom:1rem">Default Address</div>
+            <div style="background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.2);padding:1.2rem;margin-bottom:1rem">
+              <div style="font-size:0.9rem;color:var(--pearl)">Ahmed Al-Rashid</div>
+              <div style="font-size:0.8rem;color:var(--silver);margin-top:0.3rem">Abdali, Amman 11185, Jordan</div>
+              <div style="font-size:0.8rem;color:var(--silver)">+962 79 000 0000</div>
+            </div>
+            <button class="btn-outline">Add New Address</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PAGE -->
+<div id="page-admin" class="page">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;gap:2rem;text-align:center;padding:10rem 8% 6rem">
+    <div style="width:70px;height:70px;border:1px solid rgba(201,169,110,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:0.5rem">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    </div>
+    <div style="font-family:'Cinzel',serif;font-size:0.65rem;color:var(--gold);letter-spacing:0.4em;text-transform:uppercase">Secure Portal</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);line-height:1.1;margin:0">Shakra Admin<br>Dashboard</h1>
+    <p style="color:var(--silver);max-width:420px;font-size:0.88rem;line-height:1.9;margin:0">Full product management, order tracking, customer data, analytics, content editing, and brand management — available in the secure admin portal.</p>
+    <button class="btn-primary" onclick="window.top.location.href='/admin'" style="display:inline-flex;align-items:center;gap:0.75rem">
+      Open Admin Dashboard
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+    <button class="btn-outline" onclick="showPage('home')">Return to Store</button>
+  </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" class="page">
+  <div class="about-hero" style="background:var(--charcoal)">
+    <div class="section-eyebrow">Our Philosophy</div>
+    <h1 class="section-title">The Shakra Story</h1>
+    <div class="divider" style="margin:1.5rem auto"></div>
+  </div>
+  <section>
+    <p class="about-manifesto">"A fragrance is not merely a scent — it is a memory waiting to be made, an identity waiting to be claimed, a story waiting to be told."</p>
+    <div class="story-section">
+      <div class="story-content">
+        <div class="section-eyebrow">Founded 2018</div>
+        <h2 class="section-title">Born in Amman,<br>Worn Worldwide</h2>
+        <div class="divider"></div>
+        <p class="story-text">Shakra Perfume was born in the heart of Amman, Jordan — a city where ancient spice trade routes met modern ambition. Our founder, a perfume obsessive who spent years studying under master perfumers in Paris and Grasse, returned home with a vision: to create the world's finest niche fragrance house rooted in Middle Eastern heritage.</p>
+        <p class="story-text">Today, Shakra Perfume ships to over 40 countries. Our fragrances have been worn at royal events, featured in international fashion editorials, and gifted between heads of state. Yet we remain a small, obsessive house — because size is the enemy of perfection.</p>
+        <p class="story-text">Every Shakra fragrance takes between 18 months and 3 years to develop. We reject the first 97 iterations before arriving at the one that bears our name. We never rush, never compromise, never follow trends.</p>
+      </div>
+      <div class="story-visual">
+        <div class="story-frame" style="aspect-ratio:1/1.2">
+          <div style="position:absolute;inset:0;background:linear-gradient(160deg,#0a0a1a,#1a0f00);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2rem;padding:2rem">
+            <div style="text-align:center">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold)">2018</div>
+              <div style="font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase">Founded</div>
+            </div>
+            <div style="width:1px;height:40px;background:rgba(201,169,110,0.3)"></div>
+            <div style="text-align:center">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold)">27</div>
+              <div style="font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase">Fragrances</div>
+            </div>
+            <div style="width:1px;height:40px;background:rgba(201,169,110,0.3)"></div>
+            <div style="text-align:center">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold)">40+</div>
+              <div style="font-size:0.65rem;color:var(--silver);letter-spacing:0.2em;text-transform:uppercase">Countries</div>
+            </div>
+          </div>
+        </div>
+        <div class="story-accent" style="top:-15px;right:-15px;width:60px;height:60px"></div>
+      </div>
+    </div>
+    <div class="about-values">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="value-title">Uncompromising Quality</div>
+        <p class="value-text">We use only the finest raw materials. No synthetic shortcuts. No compromises. Every ingredient is sourced directly from its origin at peak quality.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-title">Ethical Sourcing</div>
+        <p class="value-text">We work directly with sustainable oud farmers, rose growers, and ingredient producers. Fair trade, transparent supply chains, environmental responsibility.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div class="value-title">Made with Passion</div>
+        <p class="value-text">Every Shakra creation begins with an emotional idea — a memory, a place, a feeling. Our perfumers translate these into olfactory art that moves people.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <div class="contact-page">
+    <div class="section-eyebrow">Get in Touch</div>
+    <h1 class="section-title">Contact Shakra</h1>
+    <div class="divider" style="margin-bottom:3rem"></div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="contact-info-title">Phone & WhatsApp</div>
+            <div class="contact-info-value">+(962) 785828950</div>
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="contact-info-title">Email</div>
+            <div class="contact-info-value">hello@shakraperfume.com</div>
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div>
+            <div class="contact-info-title">Instagram</div>
+            <div class="contact-info-value">@shakra_perfume</div>
+          </div>
+        </div>
+        <div class="contact-info-block" style="border:none">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="contact-info-title">Our Address</div>
+            <div class="contact-info-value">Amman, Jordan</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.7rem">
+          <a href="https://wa.me/962785828950" target="_blank" class="whatsapp-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="https://www.instagram.com/shakra_perfume?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-cta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="checkout-section">
+          <div class="checkout-section-title">Send a Message</div>
+          <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Subject</label>
+            <select class="form-select">
+              <option>General Inquiry</option>
+              <option>Order Support</option>
+              <option>Product Information</option>
+              <option>Wholesale & B2B</option>
+              <option>Press & Media</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" rows="5" placeholder="How can we help you?" style="resize:vertical"></textarea></div>
+          <button class="btn-primary" style="width:100%;justify-content:center" onclick="showToast(t('contact.sent'))" data-i18n="contact.send">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ PAGE -->
+<div id="page-faq" class="page">
+  <div class="faq-page">
+    <div class="section-eyebrow" data-i18n="faq.eyebrow">Help Center</div>
+    <h1 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h1>
+    <div class="divider" style="margin-bottom:3rem"></div>
+    <div id="faqList"></div>
+  </div>
+</div>
+
+<!-- PRIVACY PAGE -->
+<div id="page-privacy" class="page">
+  <div class="policy-page">
+    <div class="section-eyebrow">Legal</div>
+    <h1 class="section-title">Privacy Policy</h1>
+    <div class="divider" style="margin-bottom:2rem"></div>
+    <div class="policy-content">
+      <p>Last updated: November 2024</p>
+      <h2>1. Information We Collect</h2>
+      <p>Shakra Perfume collects information you provide directly, including name, email address, shipping address, and payment details when you make a purchase or create an account. We also collect browsing data to improve your experience.</p>
+      <h2>2. How We Use Your Information</h2>
+      <p>We use your information to process orders, provide customer service, send promotional communications (with your consent), improve our services, and comply with legal obligations.</p>
+      <h2>3. Data Security</h2>
+      <p>We implement industry-standard security measures including SSL encryption, secure payment processing, and regular security audits to protect your personal information.</p>
+      <h2>4. Your Rights</h2>
+      <p>You have the right to access, correct, or delete your personal data. You may also opt out of marketing communications at any time by contacting us or using the unsubscribe link in our emails.</p>
+      <h2>5. Contact Us</h2>
+      <p>For privacy-related inquiries, please contact us at hello@shakraperfume.com or call +(962) 785828950.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS PAGE -->
+<div id="page-terms" class="page">
+  <div class="policy-page">
+    <div class="section-eyebrow">Legal</div>
+    <h1 class="section-title">Terms of Service</h1>
+    <div class="divider" style="margin-bottom:2rem"></div>
+    <div class="policy-content">
+      <p>Last updated: November 2024</p>
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing and using the Shakra Perfume website and purchasing our products, you agree to these Terms of Service. If you do not agree, please do not use our services.</p>
+      <h2>2. Products and Pricing</h2>
+      <p>All prices are displayed in Jordanian Dinar (JOD) or US Dollar (USD). Prices are subject to change without notice. All product descriptions are provided in good faith and are as accurate as possible.</p>
+      <h2>3. Orders and Payment</h2>
+      <p>Orders are confirmed upon successful payment or COD confirmation. We accept Visa/Mastercard and Cash on Delivery. A fixed delivery fee of 3 JOD applies to all orders within Jordan.</p>
+      <h2>4. Shipping and Delivery</h2>
+      <p>Standard delivery within Jordan takes 2–4 business days. International shipping timelines vary. We are not responsible for delays caused by customs or third-party carriers.</p>
+      <h2>5. Returns and Refunds</h2>
+      <p>Due to the nature of perfume products, we accept returns only for damaged or incorrect items within 7 days of delivery. Original, unopened products may be exchanged within 14 days.</p>
+      <h2>6. Contact</h2>
+      <p>Questions about these terms? Contact us at hello@shakraperfume.com or +(962) 785828950.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast hidden" id="toast">
+  <span class="toast-icon">✦</span>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img class="logo-img-dark logo-img-full" src="/assets/logo-full.png" alt="Shakra Perfume">
+      <p class="footer-desc" data-i18n="footer.desc">A luxury niche fragrance house. We craft exclusive, handmade scents that transcend the ordinary — born in the East, worn worldwide.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shakra_perfume?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/962785828950" target="_blank" class="social-icon" title="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading" data-i18n="footer.quicklinks">Shop</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('shop')" data-i18n="footer.link.shop">All Fragrances</a></li>
+        <li><a onclick="filterCollection('Oud Royale')">Oud Royale</a></li>
+        <li><a onclick="filterCollection('La Nuit')">La Nuit</a></li>
+        <li><a onclick="filterCollection('Amber Silk')">Amber Silk</a></li>
+        <li><a onclick="filterCollection('Rose Noir')">Rose Noir</a></li>
+        <li><a onclick="filterCollection('Mystic East')">Mystic East</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading" data-i18n="footer.support">Company</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('about')" data-i18n="footer.link.about">Our Story</a></li>
+        <li><a onclick="showPage('contact')" data-i18n="footer.link.contact">Contact Us</a></li>
+        <li><a onclick="showPage('faq')" data-i18n="footer.link.faq">FAQ</a></li>
+        <li><a onclick="window.top.location.href='/admin'" style="cursor:pointer" data-i18n="footer.link.admin">Admin Panel</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading" data-i18n="footer.contact">Contact</div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>+(962) 785828950</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>hello@shakraperfume.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Amman, Jordan</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy" data-i18n="footer.copy">© 2024 Shakra Perfume. All rights reserved.</div>
+    <div class="footer-legal">
+      <a onclick="showPage('privacy')" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a onclick="showPage('terms')" data-i18n="footer.link.terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===================== DATA =====================
+let PRODUCTS = [
+  {id:1,name:"Oud Royale No.1",collection:"Oud Royale",concentration:"Extrait de Parfum",price:89,usd:122,description:"The crown jewel of our collection. Cambodian oud of the highest grade, rose absolute from Taif, liquid saffron from Iran, and white ambergris from the Indian Ocean. A fragrance that commands every room it enters.",notes:{top:["Saffron","Bergamot"],heart:["Rose Taif","Oud Cambodian","Jasmine"],base:["Ambergris","Sandalwood","Musk"]},sizes:["30ml","50ml","100ml"],badge:"Bestseller",stock:42,color:"#2d1f0a"},
+  {id:2,name:"La Nuit Mystère",collection:"La Nuit",concentration:"Eau de Parfum",price:75,usd:103,description:"Close your eyes. Midnight in Marrakech. The night jasmine blooms over ancient stone walls. La Nuit Mystère is the fragrance of secrets and seduction.",notes:{top:["Black Pepper","Cardamom"],heart:["Jasmine Sambac","Dark Rose","Iris"],base:["Oud","Vetiver","Dark Musk"]},sizes:["50ml","100ml"],badge:"New",stock:28,color:"#0a0a1a"},
+  {id:3,name:"Amber Velvet",collection:"Amber Silk",concentration:"Extrait de Parfum",price:82,usd:112,description:"Warm amber absolute enveloped in the smoothest sandalwood. A fragrance like wearing the finest cashmere — effortlessly luxurious, impossibly soft.",notes:{top:["Mandarin","Pink Pepper"],heart:["Amber","Vanilla Orchid","Heliotrope"],base:["Sandalwood","Benzoin","Cedarwood"]},sizes:["30ml","50ml","100ml"],badge:"",stock:35,color:"#1a1000"},
+  {id:4,name:"Rose Noir Absolu",collection:"Rose Noir",concentration:"Extrait de Parfum",price:95,usd:130,description:"One thousand Taif roses, distilled into a single moment of dark beauty. The blackest rose imagined, with oud at its heart and velvet at its soul.",notes:{top:["Black Pepper","Clove"],heart:["Rose Absolute","Black Rose","Oud"],base:["Black Musk","Benzoin","Patchouli"]},sizes:["30ml","50ml","100ml"],badge:"Limited",stock:15,color:"#1a0000"},
+  {id:5,name:"Mystic East Vol.I",collection:"Mystic East",concentration:"Eau de Parfum",price:72,usd:99,description:"The spice routes of antiquity, captured. Cardamom, frankincense, and precious oud journey from East to West in this landmark composition.",notes:{top:["Cardamom","Cinnamon","Citrus"],heart:["Frankincense","Rose","Oud"],base:["Sandalwood","Amber","Musk"]},sizes:["50ml","100ml"],badge:"",stock:50,color:"#0f0a1a"},
+  {id:6,name:"Oud Royale No.3",collection:"Oud Royale",concentration:"Extrait de Parfum",price:110,usd:151,description:"Our most exclusive Oud Royale expression. Indian agarwood, the rarest on earth, combined with Bulgarian rose, pure saffron oil, and white musk in perfect harmony.",notes:{top:["Saffron","Bergamot","Clove"],heart:["Oud Indian","Rose Bulgarian","Jasmine"],base:["Ambergris","White Musk","Vanilla"]},sizes:["30ml","50ml"],badge:"Exclusive",stock:8,color:"#2d1500"},
+  {id:7,name:"Soie d'Ambre",collection:"Amber Silk",concentration:"Eau de Parfum",price:68,usd:93,description:"Silk and amber intertwined. A daytime fragrance of impossible elegance — the scent of luxury hotels and first-class cabins.",notes:{top:["Lemon","Neroli"],heart:["Amber","White Jasmine","Iris"],base:["White Musk","Soft Woods","Vanilla"]},sizes:["50ml","100ml"],badge:"",stock:40,color:"#1a1200"},
+  {id:8,name:"Mystic East Vol.II",collection:"Mystic East",concentration:"Extrait de Parfum",price:88,usd:121,description:"Deeper. Darker. The second volume of our Eastern journey enters the ancient temples of incense and ritual. Sacred woods and resins that have burned for centuries.",notes:{top:["Incense","Myrrh","Bergamot"],heart:["Oud","Patchouli","Leather"],base:["Labdanum","Benzoin","Black Musk"]},sizes:["30ml","50ml","100ml"],badge:"",stock:22,color:"#0a0514"},
+];
+
+// State
+let cart = JSON.parse(localStorage.getItem('shakra_cart') || '[]');
+let wishlist = JSON.parse(localStorage.getItem('shakra_wishlist') || '[]');
+let currentFilter = 'all';
+let currentLang = 'en';
+let currentCurrency = 'JOD';
+let selectedPayment = 'card';
+
+// ===================== INIT =====================
+window.onload = async function() {
+  try {
+    const response = await fetch('/api/products');
+    if (response.ok) {
+      const payload = await response.json();
+      if (Array.isArray(payload.products) && payload.products.length) {
+        PRODUCTS = payload.products.map((p, idx) => ({
+          id: Number(String(p.id ?? idx + 1).replace(/\D/g, '').slice(0, 6)) || idx + 1,
+          name: p.name_en || p.name || 'Shakra Perfume',
+          collection: p.collection_en || 'Shakra Collection',
+          concentration: p.concentration || 'Eau de Parfum',
+          price: Number(p.price_jod || 0),
+          usd: Math.round(Number(p.price_jod || 0) * 1.37),
+          description: p.description_en || 'Shakra signature fragrance.',
+          notes: typeof p.notes === 'string' ? JSON.parse(p.notes) : (p.notes || { top: [], heart: [], base: [] }),
+          sizes: ['50ml', '100ml'],
+          badge: p.featured ? 'Featured' : '',
+          stock: Number(p.stock_quantity || 0),
+          color: p.image_gradient || '#1a1a1a'
+        }));
+      }
+    }
+  } catch (_) {}
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 2500);
+  updateCartBadge();
+  injectCollectionBottleVisuals();
+  renderFeaturedProducts();
+  renderShopGrid();
+  renderFAQ();
+  renderAdminInventory();
+};
+
+window.onscroll = function() {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+};
+
+// ===================== NAVIGATION =====================
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const page = document.getElementById('page-' + id);
+  if (page) {
+    page.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+  if (id === 'cart') renderCart();
+  if (id === 'checkout') renderCheckout();
+  if (id === 'wishlist') renderWishlist();
+  const mn = document.getElementById('mobileNav');
+  mn.classList.remove('open');
+}
+
+function navTo(id) {
+  showPage(id);
+}
+
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ===================== PRODUCTS =====================
+function bottleSVG(product, _size=100) {
+  const safeText = String(product.name || product.collection || 'Shakra Perfume')
+    .replace(/[<>&"]/g, '')
+    .toUpperCase();
+  return `<div class="bottle-render" style="--tone:${product.color || '#1a1a1a'}">
+    <img class="bottle-render-image" src="/assets/official-bottle.png" alt="${safeText}" loading="lazy" decoding="async" />
+    <span class="bottle-render-label">${safeText}</span>
+  </div>`;
+}
+
+function injectCollectionBottleVisuals() {
+  document.querySelectorAll('.bottle-art svg').forEach((svg) => svg.remove());
+  document.querySelectorAll('.collection-card').forEach((card) => {
+    if (card.querySelector('.bottle-art')) return;
+    const stage = document.createElement('div');
+    stage.className = 'bottle-art';
+    const bg = card.querySelector('.collection-bg');
+    if (bg) bg.insertAdjacentElement('afterend', stage);
+    else card.prepend(stage);
+  });
+}
+
+function productCardHTML(product, small=false) {
+  const isWished = wishlist.includes(product.id);
+  const price = currentCurrency === 'JOD' ? `${product.price} JOD` : `$${product.usd}`;
+  return `<div class="product-card" onclick="openProduct(${product.id})">
+    <div class="product-image" style="background:${product.color || 'var(--dark)'}">
+      <div class="product-visual">${bottleSVG(product, small?70:90)}</div>
+      ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+      <div class="product-actions" onclick="event.stopPropagation()">
+        <button class="product-btn" onclick="addToCart(${product.id})">${t('product.addtocart')}</button>
+        <button class="product-wishlist" onclick="toggleWishlist(${product.id},this)" title="${t('product.wishlist')}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="${isWished?'var(--gold)':'none'}" stroke="${isWished?'var(--gold)':'currentColor'}" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="product-name">${product.name}</div>
+    <div class="product-notes">${product.notes.heart.slice(0,2).join(' · ')}</div>
+    <div class="product-price">${price}</div>
+  </div>`;
+}
+
+function renderFeaturedProducts() {
+  const grid = document.getElementById('featuredGrid');
+  if (grid) grid.innerHTML = PRODUCTS.slice(0,4).map(p => productCardHTML(p)).join('');
+}
+
+function renderShopGrid(filter='all') {
+  const grid = document.getElementById('shopGrid');
+  if (!grid) return;
+  const search = document.getElementById('searchInput')?.value.toLowerCase() || '';
+  let products = PRODUCTS.filter(p => {
+    const matchFilter = filter === 'all' || p.collection === filter;
+    const matchSearch = !search || p.name.toLowerCase().includes(search) || p.collection.toLowerCase().includes(search) || p.notes.heart.join(' ').toLowerCase().includes(search);
+    return matchFilter && matchSearch;
+  });
+  document.getElementById('productCount').textContent = products.length;
+  grid.innerHTML = products.map(p => productCardHTML(p)).join('');
+}
+
+function setFilter(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderShopGrid(filter);
+}
+
+function filterProducts() { renderShopGrid(currentFilter); }
+
+function sortProducts(val) {
+  let sorted = [...PRODUCTS];
+  if (val === 'price-asc') sorted.sort((a,b) => a.price - b.price);
+  if (val === 'price-desc') sorted.sort((a,b) => b.price - a.price);
+  if (val === 'name') sorted.sort((a,b) => a.name.localeCompare(b.name));
+  const grid = document.getElementById('shopGrid');
+  if (grid) grid.innerHTML = sorted.map(p => productCardHTML(p)).join('');
+}
+
+function filterCollection(col) {
+  showPage('shop');
+  setTimeout(() => {
+    currentFilter = col;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent === col);
+    });
+    renderShopGrid(col);
+  }, 100);
+}
+
+function openProduct(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const content = document.getElementById('productDetailContent');
+  content.innerHTML = `
+    <div class="product-gallery">
+      <div class="gallery-main">${bottleSVG(p, 160)}</div>
+      <div class="gallery-thumbs">
+        ${[1,2,3].map((_,i) => `<div class="gallery-thumb ${i===0?'active':''}">${bottleSVG(p,40)}</div>`).join('')}
+      </div>
+    </div>
+    <div style="padding:2rem 0">
+      <div class="product-detail-collection">${p.collection}</div>
+      <h1 class="product-detail-name">${p.name}</h1>
+      <div class="product-rating">
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-count">(${Math.floor(Math.random()*80)+20} reviews)</span>
+      </div>
+      <div class="product-detail-price">
+        ${currentCurrency === 'JOD' ? p.price + ' JOD' : '$' + p.usd}
+        <span>${currentCurrency === 'JOD' ? '~$' + p.usd : p.price + ' JOD'}</span>
+      </div>
+      <p style="font-size:0.88rem;color:var(--silver);line-height:1.8;margin-bottom:2rem">${p.description}</p>
+      <div class="size-selector">
+        <div class="size-label">${t('product.size')}</div>
+        <div class="size-options">${p.sizes.map((s,i) => `<button class="size-opt ${i===0?'active':''}" onclick="this.closest('.size-options').querySelectorAll('.size-opt').forEach(b=>b.classList.remove('active'));this.classList.add('active')">${s}</button>`).join('')}</div>
+      </div>
+      <div class="qty-selector">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <span class="qty-num" id="qty">1</span>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+      <div class="product-detail-btns">
+        <button class="btn-primary" onclick="addToCart(${p.id})">${t('product.addtocart.btn')}</button>
+        <button class="btn-outline" onclick="toggleWishlist(${p.id})">${t('product.wishlist.btn')}</button>
+      </div>
+      <div class="notes-section">
+        <div class="notes-title">${t('product.notes.top')}</div>
+        <div class="note-tags">${p.notes.top.map(n=>`<span class="note-tag">${n}</span>`).join('')}</div>
+        <div class="notes-title" style="margin-top:1rem">${t('product.notes.heart')}</div>
+        <div class="note-tags">${p.notes.heart.map(n=>`<span class="note-tag">${n}</span>`).join('')}</div>
+        <div class="notes-title" style="margin-top:1rem">${t('product.notes.base')}</div>
+        <div class="note-tags">${p.notes.base.map(n=>`<span class="note-tag">${n}</span>`).join('')}</div>
+      </div>
+      ${[[t('product.accordion.desc'),p.description],[t('product.accordion.shipping'),t('product.shipping.text')],[t('product.accordion.ingredients'),t('product.ingredients.text')]].map(([title,body])=>`
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">${title}<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="accordion-body">${body}</div>
+      </div>`).join('')}
+    </div>`;
+  showPage('product');
+}
+
+function changeQty(delta) {
+  const el = document.getElementById('qty');
+  if (!el) return;
+  let v = parseInt(el.textContent) + delta;
+  el.textContent = Math.max(1, Math.min(10, v));
+}
+
+function toggleAccordion(header) {
+  header.classList.toggle('open');
+  header.nextElementSibling.classList.toggle('open');
+}
+
+// ===================== CART =====================
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const existing = cart.find(i => i.id === id);
+  if (existing) existing.qty++;
+  else cart.push({id, name: p.name, price: p.price, usd: p.usd, collection: p.collection, qty: 1});
+  saveCart();
+  updateCartBadge();
+  showToast(`${p.name} ${t('cart.added.toast')}`);
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(i => i.id !== id);
+  saveCart();
+  updateCartBadge();
+  renderCart();
+}
+
+function updateQty(id, delta) {
+  const item = cart.find(i => i.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) return removeFromCart(id);
+  saveCart();
+  renderCart();
+}
+
+function saveCart() {
+  localStorage.setItem('shakra_cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function updateCartBadge() {
+  const total = cart.reduce((s, i) => s + i.qty, 0);
+  const badge = document.getElementById('cartBadge');
+  if (badge) badge.textContent = total;
+}
+
+function renderCart() {
+  const container = document.getElementById('cartItems');
+  const summary = document.getElementById('cartSummary');
+  const empty = document.getElementById('emptyCart');
+  if (!container) return;
+
+  if (cart.length === 0) {
+    container.innerHTML = '';
+    empty.innerHTML = `<div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--silver);margin-bottom:1rem">${t('cart.empty')}</div>
+      <button class="btn-outline" onclick="showPage('shop')">${t('cart.continue')}</button>`;
+    empty.style.display = 'block';
+    summary.innerHTML = '';
+    return;
+  }
+  empty.style.display = 'none';
+
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const delivery = 3;
+  const total = subtotal + delivery;
+
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-image">${bottleSVG(PRODUCTS.find(p=>p.id===item.id)||{id:0,collection:''},35)}</div>
+      <div>
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-variant">${item.collection} · ${t('cart.qty.label')}</div>
+        <div class="cart-item-qty">
+          <button class="cart-qty-btn" onclick="updateQty(${item.id},-1)">−</button>
+          <span style="font-size:0.85rem;color:var(--white);min-width:20px;text-align:center">${item.qty}</span>
+          <button class="cart-qty-btn" onclick="updateQty(${item.id},1)">+</button>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="cart-item-price">${currentCurrency === 'JOD' ? (item.price * item.qty) + ' JOD' : '$' + (item.usd * item.qty)}</div>
+        <button class="cart-remove" onclick="removeFromCart(${item.id})">${t('cart.remove')}</button>
+      </div>
+    </div>`).join('');
+
+  summary.innerHTML = `
+    <div class="order-summary">
+      <div class="summary-title">${t('cart.summary')}</div>
+      ${cart.map(i => `<div class="summary-row"><span>${i.name} ×${i.qty}</span><span>${currentCurrency==='JOD'?(i.price*i.qty)+' JOD':'$'+(i.usd*i.qty)}</span></div>`).join('')}
+      <div class="summary-row"><span>${t('cart.subtotal')}</span><span>${currentCurrency==='JOD'?subtotal+' JOD':'$'+Math.round(subtotal*1.37)}</span></div>
+      <div class="summary-row" style="color:var(--gold)"><span>${t('cart.delivery')}</span><span>${currentCurrency==='JOD'?'3 JOD':'$4'}</span></div>
+      <div class="summary-row total"><span>${t('cart.total')}</span><span class="price">${currentCurrency==='JOD'?total+' JOD':'$'+Math.round(total*1.37)}</span></div>
+      <button class="btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem" onclick="showPage('checkout')">${t('cart.checkout')}</button>
+      <button class="btn-outline" style="width:100%;justify-content:center;margin-top:0.7rem" onclick="showPage('shop')">${t('cart.continue')}</button>
+    </div>`;
+}
+
+// ===================== CHECKOUT =====================
+function renderCheckout() {
+  const itemsDiv = document.getElementById('checkoutItems');
+  const subtotalEl = document.getElementById('chkSubtotal');
+  const totalEl = document.getElementById('chkTotal');
+  if (!itemsDiv) return;
+
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const total = subtotal + 3;
+
+  itemsDiv.innerHTML = cart.map(i => `<div class="summary-row"><span>${i.name} ×${i.qty}</span><span>${i.price * i.qty} JOD</span></div>`).join('');
+  if (subtotalEl) subtotalEl.textContent = subtotal + ' JOD';
+  if (totalEl) totalEl.textContent = total + ' JOD';
+}
+
+function selectPayment(type, el) {
+  selectedPayment = type;
+  document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  el.querySelector('input[type=radio]').checked = true;
+  document.getElementById('cardFields').classList.toggle('show', type === 'card');
+}
+
+function formatCard(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,16);
+  input.value = v.replace(/(.{4})/g,'$1 ').trim();
+}
+
+function formatExpiry(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,4);
+  if (v.length > 2) v = v.substring(0,2) + ' / ' + v.substring(2);
+  input.value = v;
+}
+
+async function placeOrder() {
+  const fname = document.getElementById('chkFirstName')?.value;
+  const lname = document.getElementById('chkLastName')?.value;
+  const email = document.getElementById('chkEmail')?.value;
+  const phone = document.getElementById('chkPhone')?.value;
+  const city = document.getElementById('chkCity')?.value;
+  const address = document.getElementById('chkAddress')?.value;
+
+  if (!fname || !lname || !email || !phone || !city || !address) {
+    showToast('Please fill in all required fields');
+    return;
+  }
+
+  try {
+    const checkoutResponse = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        customer: {
+          name: `${fname} ${lname}`,
+          email,
+          phone,
+          address: `${address}, ${city}`
+        },
+        paymentMethod: selectedPayment,
+        items: cart.map(i => ({ productId: String(i.id), quantity: i.qty }))
+      })
+    });
+    if (!checkoutResponse.ok) throw new Error('checkout-failed');
+    const orderPayload = await checkoutResponse.json();
+    const orderId = orderPayload?.order?.id || ('SKR-2024-' + Math.floor(1000 + Math.random() * 9000));
+    document.getElementById('successOrderId').textContent = 'Order ' + orderId;
+  } catch (_) {
+    const orderId = 'SKR-2024-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('successOrderId').textContent = 'Order ' + orderId;
+  }
+  cart = [];
+  saveCart();
+  showPage('success');
+}
+
+// ===================== WISHLIST =====================
+function toggleWishlist(id, btn) {
+  const idx = wishlist.indexOf(id);
+  if (idx > -1) {
+    wishlist.splice(idx, 1);
+    showToast(t('wishlist.removed'));
+  } else {
+    wishlist.push(id);
+    showToast(t('wishlist.added'));
+  }
+  localStorage.setItem('shakra_wishlist', JSON.stringify(wishlist));
+  renderFeaturedProducts();
+  renderShopGrid(currentFilter);
+  if (document.getElementById('page-wishlist').classList.contains('active')) renderWishlist();
+}
+
+function renderWishlist() {
+  const grid = document.getElementById('wishlistGrid');
+  const empty = document.getElementById('emptyWishlist');
+  if (!grid) return;
+  const items = PRODUCTS.filter(p => wishlist.includes(p.id));
+  if (items.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+  } else {
+    empty.style.display = 'none';
+    grid.innerHTML = items.map(p => productCardHTML(p)).join('');
+  }
+}
+
+// ===================== AUTH =====================
+function showRegister() {
+  document.getElementById('loginBox').style.display = 'none';
+  document.getElementById('registerBox').style.display = 'block';
+}
+function showLogin() {
+  document.getElementById('loginBox').style.display = 'block';
+  document.getElementById('registerBox').style.display = 'none';
+}
+async function loginUser() {
+  const isRegister = document.getElementById('registerBox').style.display !== 'none';
+  try {
+    if (isRegister) {
+      const fields = document.querySelectorAll('#registerBox input');
+      const first = fields[0]?.value || '';
+      const last = fields[1]?.value || '';
+      const email = fields[2]?.value || '';
+      const phone = fields[3]?.value || '';
+      const password = fields[4]?.value || '';
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: `${first} ${last}`.trim(), email, password, phone })
+      });
+      if (!response.ok) throw new Error('register-failed');
+    } else {
+      const fields = document.querySelectorAll('#loginBox input');
+      const email = fields[0]?.value || '';
+      const password = fields[1]?.value || '';
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      if (!response.ok) throw new Error('login-failed');
+    }
+    showPage('dashboard');
+    showToast('Welcome to Shakra Perfume');
+  } catch (_) {
+    showToast('Authentication failed. Please try again.');
+  }
+}
+
+// ===================== DASHBOARD =====================
+function showDashSection(id, btn) {
+  ['orders','wishlist-dash','profile','addresses'].forEach(s => {
+    const el = document.getElementById('dash-' + s);
+    if (el) el.style.display = 'none';
+  });
+  const target = document.getElementById('dash-' + id);
+  if (target) target.style.display = 'block';
+  document.querySelectorAll('.dash-nav-item').forEach(i => i.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+// ===================== ADMIN =====================
+function renderAdminInventory() {
+  const tbody = document.getElementById('adminInventory');
+  if (!tbody) return;
+  tbody.innerHTML = PRODUCTS.map(p => `
+    <tr>
+      <td>${p.name}</td>
+      <td>${p.collection}</td>
+      <td>${p.price} JOD</td>
+      <td style="color:${p.stock < 10 ? '#ef4444' : p.stock < 20 ? '#fbbf24' : '#4ade80'}">${p.stock}</td>
+      <td><span class="order-status ${p.stock > 20 ? 'status-delivered' : p.stock > 10 ? 'status-processing' : 'status-shipped'}">${p.stock > 20 ? 'In Stock' : p.stock > 10 ? 'Low Stock' : 'Critical'}</span></td>
+      <td><button class="action-btn">Edit</button></td>
+    </tr>`).join('');
+}
+
+// ===================== FAQ =====================
+const FAQS = [
+  {q:"How long does delivery take within Jordan?",a:"Standard delivery within Jordan takes 2–4 business days. We will contact you to confirm your delivery window."},
+  {q:"What payment methods do you accept?",a:"We accept Visa, Mastercard, and Cash on Delivery (COD). A fixed delivery fee of 3 JOD applies to all orders."},
+  {q:"Are your perfumes authentic and original?",a:"Absolutely. Every Shakra fragrance is an original composition created exclusively by our perfumers. We never copy or imitate other brands."},
+  {q:"Can I return or exchange a perfume?",a:"Due to the intimate nature of fragrance, we accept exchanges for unopened, undamaged products within 14 days. Damaged or incorrect items can be returned within 7 days."},
+  {q:"Do you ship internationally?",a:"Yes, we ship to over 40 countries. International shipping rates and timelines vary by destination. Contact us for a shipping quote."},
+  {q:"How should I store my perfume?",a:"Store your Shakra fragrances away from direct sunlight and heat, ideally in a cool, dark place. Avoid storing in bathrooms where temperature fluctuates."},
+  {q:"What is the difference between Extrait de Parfum and Eau de Parfum?",a:"Extrait de Parfum has a higher fragrance oil concentration (20–40%) for longer-lasting, more intense wear. Eau de Parfum (15–20%) offers excellent longevity with a slightly lighter character."},
+  {q:"Do you offer gift wrapping?",a:"Yes! All Shakra orders come in our signature black and gold packaging. We also offer premium gift wrapping with a handwritten note for an additional fee. Contact us to arrange."},
+];
+
+function renderFAQ() {
+  const list = document.getElementById('faqList');
+  if (!list) return;
+  const faqs = currentLang === 'ar' ? FAQS_AR : FAQS;
+  list.innerHTML = faqs.map((f,i) => `
+    <div class="faq-item" onclick="toggleFAQ(${i})">
+      <div class="faq-q" id="faq-q-${i}">${f.q}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a" id="faq-a-${i}">${f.a}</div>
+    </div>`).join('');
+}
+
+function toggleFAQ(i) {
+  const q = document.getElementById('faq-q-' + i);
+  const a = document.getElementById('faq-a-' + i);
+  q.classList.toggle('open');
+  a.classList.toggle('open');
+}
+
+// ===================== LANGUAGE & CURRENCY =====================
+const TRANSLATIONS = {
+  en:{
+    'loader.brand':'SHAKRA PERFUME',
+    'nav.home':'Home','nav.shop':'Shop','nav.collections':'Collections','nav.story':'Our Story','nav.contact':'Contact','nav.account':'Account',
+    'hero.eyebrow':'Luxury Niche Fragrance House — Est. 2018',
+    'hero.title':'Where Scent<br>Becomes <em>Legend</em>',
+    'hero.subtitle':"Handcrafted from the world's rarest ingredients. Each Shakra fragrance is an olfactory journey — a whisper of luxury that lingers.",
+    'hero.cta':'Explore Collection','hero.story':'Our Story','hero.scroll':'Discover',
+    'marquee.1':'Luxury Niche Fragrance','marquee.2':'Hand-Blended in Amman','marquee.3':'Rare Oud & Amber',
+    'marquee.4':'Free Shipping Over 150 JOD','marquee.5':'Shakra Perfume','marquee.6':'Exclusive Collections',
+    'collections.eyebrow':'Curated Collections','collections.title':'Fragrance for<br>Every Emotion',
+    'featured.eyebrow':'Featured','featured.title':'Bestsellers','featured.viewall':'View All',
+    'story.stat.number':'180+','story.stat.label':'Rare Ingredients',
+    'story.eyebrow':'Our Heritage','story.title':'Born from the<br>Essence of the East',
+    'story.p1':"Shakra Perfume was founded on a singular vision: to create fragrances that transcend time — compositions so rare and personal, they become part of your identity rather than merely adorning it.",
+    'story.p2':"Sourced from the souks of Dubai, the rose fields of Taif, and the ancient forests of Cambodia, each ingredient is selected with obsessive attention to quality. Our master perfumers blend Eastern oud traditions with Western haute parfumerie techniques.",
+    'story.pillar1.title':'Artisan Craft','story.pillar1.text':'Every bottle is hand-filled and quality-checked, ensuring perfection in each drop.',
+    'story.pillar2.title':'Rare Materials','story.pillar2.text':'We source only the top 1% of raw materials from their country of origin.',
+    'story.pillar3.title':'Timeless Design','story.pillar3.text':'Our bottles are heirloom objects — crafted to be displayed and treasured.',
+    'story.pillar4.title':'Authenticity','story.pillar4.text':'Every fragrance is original, never a copy — a true Shakra signature.',
+    'story.discover':'Discover Our Story',
+    'testimonials.eyebrow':'Reviews','testimonials.title':'What Our Clients Say',
+    'newsletter.eyebrow':'Exclusive Access','newsletter.title':'Be the First to Know',
+    'newsletter.subtitle':'Join our inner circle for early access to new collections, private events, and fragrance stories.',
+    'newsletter.placeholder':'Your email address','newsletter.submit':'Subscribe',
+    'footer.desc':'A luxury niche fragrance house. We craft exclusive, handmade scents that transcend the ordinary — born in the East, worn worldwide.',
+    'footer.quicklinks':'Shop','footer.support':'Company','footer.contact':'Contact',
+    'footer.link.shop':'All Fragrances','footer.link.about':'Our Story','footer.link.contact':'Contact Us',
+    'footer.link.faq':'FAQ','footer.link.admin':'Admin Panel','footer.link.privacy':'Privacy Policy','footer.link.terms':'Terms of Service',
+    'footer.copy':'© 2024 Shakra Perfume. All rights reserved.',
+    'shop.eyebrow':'The Collection','shop.title':'All Fragrances','shop.search':'Search fragrances...','shop.count':'fragrances',
+    'shop.filter.all':'All',
+    'shop.sort.featured':'Featured','shop.sort.price-asc':'Price: Low to High','shop.sort.price-desc':'Price: High to Low','shop.sort.name':'Name A–Z',
+    'product.addtocart':'Add to Cart','product.wishlist':'Wishlist','product.added':'added to your cart',
+    'product.reviews':'reviews','product.size':'Size',
+    'product.addtocart.btn':'Add to Cart','product.wishlist.btn':'♡ Wishlist',
+    'product.notes.top':'Top Notes','product.notes.heart':'Heart Notes','product.notes.base':'Base Notes',
+    'product.accordion.desc':'Description','product.accordion.shipping':'Shipping & Returns','product.accordion.ingredients':'Ingredients',
+    'product.shipping.text':'Free shipping on orders over 150 JOD. Delivery 2–4 business days within Jordan. Returns accepted within 7 days for damaged items.',
+    'product.ingredients.text':'Natural fragrance compounds, alcohol, aqua. EU allergen compliant. Not tested on animals.',
+    'cart.eyebrow':'Shopping','cart.title':'Your Cart','cart.empty':'Your cart is empty',
+    'cart.continue':'Continue Shopping','cart.summary':'Order Summary','cart.subtotal':'Subtotal',
+    'cart.delivery':'Delivery','cart.total':'Total','cart.checkout':'Proceed to Checkout','cart.remove':'Remove','cart.qty.label':'50ml',
+    'checkout.eyebrow':'Secure Checkout','checkout.title':'Complete Your Order',
+    'collections.page.eyebrow':'Shakra Perfume','collections.page.title':'Our Collections',
+    'collections.page.subtitle':'Five distinct olfactory worlds, each a chapter in the Shakra story. Explore fragrances crafted for different moods, seasons, and desires.',
+    'faq.eyebrow':'Help Center','faq.title':'Frequently Asked Questions',
+    'wishlist.eyebrow':'My Wishlist','wishlist.title':'Saved Fragrances','wishlist.empty':'Your wishlist is empty','wishlist.discover':'Discover Fragrances',
+    'contact.sent':'Message sent! We will respond within 24 hours.',
+    'newsletter.toast':'Welcome to the Shakra inner circle. ✦',
+    'newsletter.invalid':'Please enter a valid email address',
+    'cart.added.toast':'added to your cart',
+    'wishlist.added':'Added to wishlist','wishlist.removed':'Removed from wishlist',
+  },
+  ar:{
+    'loader.brand':'شاكرا للعطور',
+    'nav.home':'الرئيسية','nav.shop':'المتجر','nav.collections':'المجموعات','nav.story':'قصتنا','nav.contact':'تواصل معنا','nav.account':'حسابي',
+    'hero.eyebrow':'دار عطور فاخرة — تأسست ٢٠١٨',
+    'hero.title':'حيث تصبح العطور<br><em>أسطورة</em>',
+    'hero.subtitle':'مُعدَّة يدوياً من أندر المكونات في العالم. كل عطر شاكرا رحلة شمية فريدة — همسة من الفخامة تبقى في الذاكرة.',
+    'hero.cta':'اكتشف المجموعة','hero.story':'قصتنا','hero.scroll':'اكتشف',
+    'marquee.1':'عطور فاخرة حصرية','marquee.2':'مُعدَّة يدوياً في عمّان','marquee.3':'عود نادر وعنبر فاخر',
+    'marquee.4':'شحن مجاني فوق ١٥٠ دينار','marquee.5':'شاكرا للعطور','marquee.6':'مجموعات حصرية',
+    'collections.eyebrow':'مجموعات مختارة','collections.title':'عطر لكل<br>مشاعرك',
+    'featured.eyebrow':'المميزة','featured.title':'الأكثر مبيعاً','featured.viewall':'عرض الكل',
+    'story.stat.number':'+١٨٠','story.stat.label':'مكوّن نادر',
+    'story.eyebrow':'إرثنا','story.title':'وُلدنا من<br>روح الشرق',
+    'story.p1':'تأسست شاكرا للعطور على رؤية واحدة: ابتكار عطور تتجاوز حدود الزمن — تركيبات نادرة وشخصية تصبح جزءاً من هويتك لا مجرد زينة.',
+    'story.p2':'من أسواق دبي وحقول ورد الطائف وغابات كمبوديا العريقة، يُختار كل مكوّن بعناية فائقة. يمزج عطّارونا بين تقاليد العود الشرقية وفنون البرفمري الغربية الراقية.',
+    'story.pillar1.title':'صناعة يدوية','story.pillar1.text':'كل زجاجة تُملأ يدوياً وتخضع لفحص الجودة لضمان الكمال في كل قطرة.',
+    'story.pillar2.title':'مواد نادرة','story.pillar2.text':'نستخرج فقط أفضل ١٪ من المواد الخام من بلدان منشئها الأصلية.',
+    'story.pillar3.title':'تصميم خالد','story.pillar3.text':'زجاجاتنا تحف فنية — مُصنَّعة لتُعرض وتُقدَّر عبر الأجيال.',
+    'story.pillar4.title':'الأصالة','story.pillar4.text':'كل عطر أصيل ولا يُقلَّد — توقيع شاكرا الحقيقي.',
+    'story.discover':'اكتشف قصتنا',
+    'testimonials.eyebrow':'آراء العملاء','testimonials.title':'ما يقوله عملاؤنا',
+    'newsletter.eyebrow':'وصول حصري','newsletter.title':'كن أول من يعلم',
+    'newsletter.subtitle':'انضم إلى دائرتنا الداخلية للوصول المبكر إلى المجموعات الجديدة والفعاليات الخاصة.',
+    'newsletter.placeholder':'بريدك الإلكتروني','newsletter.submit':'اشترك',
+    'footer.desc':'دار عطور فاخرة وُلدت في عمّان، الأردن. مُعدَّة لمن يسعى إلى الاستثنائي.',
+    'footer.quicklinks':'المتجر','footer.support':'الشركة','footer.contact':'تواصل معنا',
+    'footer.link.shop':'جميع العطور','footer.link.about':'قصتنا','footer.link.contact':'تواصل معنا',
+    'footer.link.faq':'الأسئلة الشائعة','footer.link.admin':'لوحة الإدارة','footer.link.privacy':'سياسة الخصوصية','footer.link.terms':'شروط الخدمة',
+    'footer.copy':'© ٢٠٢٤ شاكرا للعطور. جميع الحقوق محفوظة.',
+    'shop.eyebrow':'المجموعة','shop.title':'جميع العطور','shop.search':'ابحث عن عطر...','shop.count':'عطر',
+    'shop.filter.all':'الكل',
+    'shop.sort.featured':'المميزة','shop.sort.price-asc':'السعر: من الأقل','shop.sort.price-desc':'السعر: من الأعلى','shop.sort.name':'الاسم أ–ي',
+    'product.addtocart':'أضف للسلة','product.wishlist':'المفضلة','product.added':'أضيف إلى سلتك',
+    'product.reviews':'تقييم','product.size':'الحجم',
+    'product.addtocart.btn':'أضف للسلة','product.wishlist.btn':'♡ أضف للمفضلة',
+    'product.notes.top':'النوتات الأولية','product.notes.heart':'النوتات القلبية','product.notes.base':'النوتات القاعدية',
+    'product.accordion.desc':'الوصف','product.accordion.shipping':'الشحن والإرجاع','product.accordion.ingredients':'المكونات',
+    'product.shipping.text':'شحن مجاني للطلبات فوق ١٥٠ دينار. التسليم خلال ٢-٤ أيام عمل داخل الأردن. قبول الإرجاع خلال ٧ أيام للمنتجات التالفة.',
+    'product.ingredients.text':'مركبات عطرية طبيعية، كحول، ماء. متوافق مع لوائح الحساسية الأوروبية. لم يُختبر على الحيوانات.',
+    'cart.eyebrow':'التسوق','cart.title':'سلة الشراء','cart.empty':'سلتك فارغة',
+    'cart.continue':'متابعة التسوق','cart.summary':'ملخص الطلب','cart.subtotal':'المجموع الفرعي',
+    'cart.delivery':'رسوم التوصيل','cart.total':'الإجمالي','cart.checkout':'المتابعة للدفع','cart.remove':'حذف','cart.qty.label':'٥٠مل',
+    'checkout.eyebrow':'دفع آمن','checkout.title':'أتمم طلبك',
+    'collections.page.eyebrow':'شاكرا للعطور','collections.page.title':'مجموعاتنا',
+    'collections.page.subtitle':'خمسة عوالم شمية متميزة، كل منها فصل في قصة شاكرا. استكشف عطوراً مُعدَّة لمختلف المزاجات والمواسم والرغبات.',
+    'faq.eyebrow':'مركز المساعدة','faq.title':'الأسئلة الشائعة',
+    'wishlist.eyebrow':'قائمة رغباتي','wishlist.title':'العطور المحفوظة','wishlist.empty':'قائمة رغباتك فارغة','wishlist.discover':'اكتشف العطور',
+    'contact.sent':'تم إرسال رسالتك! سنرد خلال ٢٤ ساعة.',
+    'newsletter.toast':'مرحباً بك في دائرة شاكرا الداخلية. ✦',
+    'newsletter.invalid':'يرجى إدخال بريد إلكتروني صحيح',
+    'cart.added.toast':'أضيف إلى سلتك',
+    'wishlist.added':'أضيف إلى المفضلة','wishlist.removed':'حُذف من المفضلة',
+  }
+};
+
+const FAQS_AR = [
+  {q:"كم يستغرق التوصيل داخل الأردن؟",a:"يستغرق التوصيل القياسي داخل الأردن ٢-٤ أيام عمل. سنتواصل معك لتأكيد موعد التسليم."},
+  {q:"ما طرق الدفع المتاحة؟",a:"نقبل الدفع بالبطاقات الائتمانية (فيزا وماستركارد) والدفع عند الاستلام. يُطبَّق رسم توصيل ثابت قدره ٣ دينار على جميع الطلبات."},
+  {q:"هل عطوركم أصيلة وأصلية؟",a:"بالتأكيد. كل عطر شاكرا تركيبة أصيلة مُبتكَرة حصرياً من قِبل عطّارينا. لا نقوم أبداً بنسخ أو تقليد ماركات أخرى."},
+  {q:"هل يمكنني إرجاع العطر أو استبداله؟",a:"نظراً للطبيعة الشخصية للعطور، نقبل الاستبدال للمنتجات غير المفتوحة وغير التالفة خلال ١٤ يوماً. تُقبل المنتجات التالفة أو الخاطئة للإرجاع خلال ٧ أيام."},
+  {q:"هل تشحنون دولياً؟",a:"نعم، نشحن إلى أكثر من ٤٠ دولة. تختلف أسعار الشحن الدولي ومدده حسب الوجهة. تواصل معنا للحصول على عرض سعر للشحن."},
+  {q:"كيف أحفظ عطري؟",a:"احفظ عطور شاكرا بعيداً عن أشعة الشمس المباشرة والحرارة، ويفضل في مكان بارد ومظلم. تجنب التخزين في الحمامات حيث تتغير درجات الحرارة."},
+  {q:"ما الفرق بين إكسترا دو بارفيم وأو دو بارفيم؟",a:"يحتوي إكسترا دو بارفيم على تركيز أعلى من زيت العطر (٢٠-٤٠٪) لبقاء أطول وأكثر كثافة. أما أو دو بارفيم (١٥-٢٠٪) فيوفر ثباتاً ممتازاً مع طابع أخف قليلاً."},
+  {q:"هل تقدمون خدمة التغليف كهدية؟",a:"نعم! جميع طلبات شاكرا تأتي في عبواتنا المميزة باللون الأسود والذهبي. نقدم أيضاً تغليف هدايا فاخر مع بطاقة مكتوبة بخط اليد مقابل رسوم إضافية. تواصل معنا للترتيب."},
+];
+
+function t(key) {
+  return (TRANSLATIONS[currentLang] || TRANSLATIONS.en)[key] ?? TRANSLATIONS.en[key] ?? key;
+}
+
+function translatePage() {
+  const isRTL = currentLang === 'ar';
+  document.documentElement.lang = currentLang;
+  document.body.dir = isRTL ? 'rtl' : 'ltr';
+  document.getElementById('langBtn').textContent = isRTL ? 'English' : 'عربي';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = t(el.dataset.i18n);
+    if (val && val !== el.dataset.i18n) el.innerHTML = val;
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const val = t(el.dataset.i18nPlaceholder);
+    if (val && val !== el.dataset.i18nPlaceholder) el.placeholder = val;
+  });
+  document.querySelectorAll('option[data-i18n]').forEach(el => {
+    const val = t(el.dataset.i18n);
+    if (val && val !== el.dataset.i18n) el.textContent = val;
+  });
+  renderFeaturedProducts();
+  renderShopGrid(currentFilter);
+  renderFAQ();
+  if (document.getElementById('page-cart').classList.contains('active')) renderCart();
+  if (document.getElementById('page-wishlist').classList.contains('active')) renderWishlist();
+}
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'ar' : 'en';
+  translatePage();
+  showToast(currentLang === 'ar' ? 'تم التبديل إلى العربية ✦' : 'Switched to English ✦');
+}
+
+function toggleCurrency() {
+  currentCurrency = currentCurrency === 'JOD' ? 'USD' : 'JOD';
+  document.getElementById('currBtn').textContent = currentCurrency;
+  renderFeaturedProducts();
+  renderShopGrid(currentFilter);
+}
+
+// ===================== NEWSLETTER =====================
+async function subscribeNewsletter() {
+  const input = document.getElementById('newsletterEmail');
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) { showToast(t('newsletter.invalid')); return; }
+  try {
+    await fetch('/api/newsletter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, language: currentLang })
+    });
+  } catch (_) {}
+  showToast(t('newsletter.toast'));
+  input.value = '';
+}
+
+// ===================== TOAST =====================
+let toastTimer;
+function showToast(msg) {
+  clearTimeout(toastTimer);
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.remove('hidden');
+  toastTimer = setTimeout(() => toast.classList.add('hidden'), 3500);
+}
+
+// ===================== AI RECOMMENDATION (dummy) =====================
+function getRecommendations(productId) {
+  return PRODUCTS.filter(p => p.id !== productId).slice(0, 3);
+}
+</script>
+</body>
+</html>
