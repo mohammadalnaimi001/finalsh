@@ -9,7 +9,7 @@
     "dev:ui": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "start": "tsx server/index.ts",
+    "start": "NODE_ENV=production tsx server/index.ts",
     "server": "tsx server/index.ts",
     "db:migrate": "node -e \"console.log('Run: psql \\\"$DATABASE_URL\\\" -f server/schema.sql')\"",
     "lint": "eslint .",
