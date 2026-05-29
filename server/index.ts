@@ -935,11 +935,20 @@ if (process.env.NODE_ENV === "production") {
   app.use("/assets", express.static(path.join(distDir, "assets")));
   app.use(express.static(distDir));
 
-  app.get(/^(?!\/api).*/, (_req, res) => {
-    console.log("Serving SPA route:", _req.url);
-    res.sendFile(path.join(distDir, "index.html"));
-  });
-}
+  app.get("*", (req, res, next) => {
+  if (
+    req.path.startsWith("/api") ||
+    req.path.startsWith("/assets") ||
+    req.path.includes(".")
+  ) {
+    console.log("static/api:", req.path);
+    return next();
+  }
+
+  console.log(" SPA:", req.url);
+  res.sendFile(path.join(distDir, "index.html"));
+});
+} //
 
 app.use((error: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   if (error instanceof multer.MulterError) {
