@@ -930,10 +930,14 @@ app.post("/api/newsletter", async (req, res) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-  const distDir = path.resolve(__dirname, "..", "dist");
-  app.use(express.static(distDir, { maxAge: "1d", etag: true }));
-  app.get(/.*/, (_req, res) => {
-    res.sendFile(path.resolve(distDir, "index.html"));
+  const distDir = path.resolve(process.cwd(), "dist");
+
+  app.use("/assets", express.static(path.join(distDir, "assets")));
+  app.use(express.static(distDir));
+
+  app.get(/^(?!\/api).*/, (_req, res) => {
+    console.log("Serving SPA route:", _req.url);
+    res.sendFile(path.join(distDir, "index.html"));
   });
 }
 
