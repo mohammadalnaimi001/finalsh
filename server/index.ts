@@ -932,7 +932,7 @@ app.post("/api/newsletter", async (req, res) => {
 if (process.env.NODE_ENV === "production") {
   const distDir = path.resolve(__dirname, "..", "dist");
   app.use(express.static(distDir, { maxAge: "1d", etag: true }));
-  app.get("*", (_req, res) => {
+  app.get(/.*/, (_req, res) => {
     res.sendFile(path.resolve(distDir, "index.html"));
   });
 }
