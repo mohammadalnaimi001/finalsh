@@ -36,7 +36,8 @@ app.use(
       const localhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
       const railway = /^https?:\/\/.*\.railway\.app$/i.test(origin);
       const up = /^https?:\/\/.*\.up\.railway\.app$/i.test(origin);
-      if (localhost || railway || up || allowlist.includes(origin)) return callback(null, true);
+      const render = /^https?:\/\/.*\.onrender\.com$/i.test(origin);
+      if (localhost || railway || up || render || allowlist.includes(origin)) return callback(null, true);
       return callback(new Error("CORS origin not allowed"));
     }
   })
@@ -932,7 +933,7 @@ app.post("/api/newsletter", async (req, res) => {
 if (process.env.NODE_ENV === "production") {
   const distDir = path.resolve(process.cwd(), "dist");
 
-  app.use("/assets", (req, res, next) => {
+  app.use("/assets", (req, _res, next) => {
     console.log("ASSET REQUEST:", req.path);
     next();
   });
