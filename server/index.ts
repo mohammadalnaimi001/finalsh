@@ -934,12 +934,12 @@ if (process.env.NODE_ENV === "production") {
   
   
 
-  app.use("/assets", express.static(path.join(distDir, "assets")));
-  app.use(express.static(distDir));
-
-  app.get(/^(?!\/(api|assets|brand)).*/, (_req, res) => {
-  res.sendFile(path.join(distDir, "index.html"));
+  app.use("/assets", (req, res, next) => {
+  console.log("ASSET REQUEST:", req.path);
+  next();
 });
+
+app.use("/assets", express.static(path.join(distDir, "assets")));
 }
 
 
