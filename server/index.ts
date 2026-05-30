@@ -931,17 +931,19 @@ app.post("/api/newsletter", async (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   const distDir = path.resolve(process.cwd(), "dist");
-  
-  
 
   app.use("/assets", (req, res, next) => {
-  console.log("ASSET REQUEST:", req.path);
-  next();
-});
+    console.log("ASSET REQUEST:", req.path);
+    next();
+  });
 
-app.use("/assets", express.static(path.join(distDir, "assets")));
+  app.use("/assets", express.static(path.join(distDir, "assets")));
+  app.use(express.static(distDir));
+
+  app.get(/.*/, (_req, res) => {
+    res.sendFile(path.join(distDir, "index.html"));
+  });
 }
-
 
 app.use((error: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   if (error instanceof multer.MulterError) {
